@@ -1873,8 +1873,6 @@ button {
     }
 
 }
-
-
 /* =========================================================
    MOBILE
    ========================================================= */
@@ -2010,12 +2008,10 @@ button {
         letter-spacing: 3px;
     }
 
-    .experience h2 {
-        font-size:
-            clamp(34px,9vw,46px);
-
-        line-height: 1.04;
-    }
+   .experience h2 {
+    font-size: 32px;
+    line-height: 1.08;
+}
 
     .section-text {
         font-size: 12px;
@@ -2161,17 +2157,13 @@ button {
         margin-top: 7px;
     }
 
-
     /* =====================================================
        TRIPS MOBILE
        SMALLER + EASY SWIPE
        ===================================================== */
-
-    .trips {
-        padding:
-            80px 14px;
-    }
-
+.trips {
+    padding: 80px 14px 25px;
+}
     .trips-header {
         margin-bottom:
             38px;
@@ -2723,18 +2715,17 @@ button {
         scroll-snap-type: x mandatory;
     }
 
-    .gili-card {
-        flex: 0 0 62%;
-        width: 62%;
-        min-width: 62%;
+.gili-card {
+    flex: 0 0 82%;
+    width: 82%;
+    min-width: 82%;
 
-        height: 360px;
+   height: 390px;
 
-        scroll-snap-align: center;
+    scroll-snap-align: center;
 
-        transform: none !important;
-    }
-
+    transform: none !important;
+}
     .gili-card-content {
         left: 15px;
         right: 15px;
@@ -2770,12 +2761,9 @@ button {
         font-size: 6.5px;
         letter-spacing: 1px;
     }
-
-
     /* =========================
        GILI ARROW
        ========================= */
-
     .gili-arrow {
         width: 34px;
         height: 34px;
@@ -2792,12 +2780,9 @@ button {
     .gili-next {
         right: 0;
     }
-
-
     /* =========================
        TRIP CAROUSEL
        ========================= */
-
     .trip-cards {
         gap: 12px;
 
@@ -2816,25 +2801,18 @@ button {
 
         scroll-snap-type: x mandatory;
     }
-
-
     /* CARD JAUH LEBIH KECIL */
 
-    .trip-card {
-        flex: 0 0 62% !important;
+.trip-card {
+    flex: 0 0 88% !important;
+    width: 88% !important;
+    min-width: 88% !important;
 
-        width: 62% !important;
+    min-height: 430px;
 
-        min-width: 62% !important;
-
-        min-height: 370px;
-
-        scroll-snap-align: center;
-
-        transform: none !important;
-    }
-
-
+    scroll-snap-align: center;
+    transform: none !important;
+}
     /* =========================
        GAMBAR CARD
        ========================= */
@@ -2845,7 +2823,6 @@ button {
 
         object-fit: cover;
     }
-
 
     /* =========================
        NOMOR
@@ -2859,7 +2836,6 @@ button {
 
         letter-spacing: 2px;
     }
-
 
     /* =========================
        JUDUL
@@ -2888,18 +2864,15 @@ button {
         line-height: 1.5;
     }
 
-
     /* =========================
        HARGA
        ========================= */
-
     .trip-price {
         margin:
             11px 14px 0;
 
         font-size: 10px;
     }
-
 
     /* =========================
        OFFER
@@ -2913,7 +2886,6 @@ button {
 
         letter-spacing: 1.5px;
     }
-
 
     /* =========================
        BUTTON
@@ -2940,7 +2912,6 @@ button {
         letter-spacing: 1px;
     }
 
-
     /* =========================
        TRIP ARROWS
        ========================= */
@@ -2963,11 +2934,9 @@ button {
     }
 }
 
-
 /* =========================================================
    EXTRA SMALL PHONE
    ========================================================= */
-
 @media (max-width: 420px) {
 
     .gili-card {
@@ -3122,4 +3091,306 @@ button {
     .language-switcher button {
         font-size: 5.5px;
     }
+}
+/* LOGO GILI LOMBOK */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+}
+
+.navbar .logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+}
+
+/* HP */
+@media (max-width: 768px) {
+    .navbar .logo img {
+        width: 60px;
+        height: 60px;
+    }
+}
+/* =====================================================
+   MOBILE OPTIMIZATION
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* BODY */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar {
+        height: 64px;
+        min-height: 64px;
+        padding: 0 16px;
+    }
+
+    .logo {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+   .nav-button {
+    margin-left: auto;
+    padding: 10px 14px;
+    font-size: 8px;
+    letter-spacing: 1.3px;
+    white-space: nowrap;
+}
+
+    .language-switcher {
+        margin-left: 8px;
+        font-size: 8px;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+        min-height: 0;
+        height: 500px;
+        max-height: 500px;
+        padding: 0;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 22px;
+        box-sizing: border-box;
+    }
+
+    .hero .subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
+    }
+
+   .hero h1 {
+    font-size: clamp(34px, 9vw, 42px);
+    line-height: 1.08;
+    margin-bottom: 14px;
+}
+
+.hero .description {
+    max-width: 310px;
+    margin: 0 auto 22px;
+    font-size: 12px;
+    line-height: 1.55;
+}
+.hero-button {
+    padding: 13px 22px;
+    font-size: 8px;
+    letter-spacing: 1.6px;
+}
+    /* ================= VIDEO ================= */
+
+    .video-showcase {
+        height: 360px;
+        min-height: 360px;
+    }
+
+    .video-overlay {
+        padding: 24px;
+    }
+
+    .video-overlay p {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+.video-overlay h2 {
+    font-size: 30px;
+    line-height: 1.08;
+    margin-bottom: 14px;
+}
+    .video-overlay span {
+        font-size: 9px;
+    }
+
+    /* ================= GILI ISLANDS ================= */
+
+    .experience {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .experience-header {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .experience-header h2 {
+        font-size: 34px;
+        line-height: 1.05;
+    }
+
+    .experience-header .section-text {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .gili-carousel {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .gili-track {
+        gap: 12px;
+    }
+
+    .gili-card {
+        min-width: calc(100vw - 70px);
+        max-width: calc(100vw - 70px);
+    }
+
+    .gili-card-content {
+        padding: 18px;
+    }
+
+    .gili-card-content h3 {
+        font-size: 22px;
+    }
+
+    .gili-card-content p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .gili-button {
+        font-size: 8px;
+        padding: 10px 14px;
+    }
+
+}
+/* =====================================================
+   FIX JARAK GILI → BOAT SECTION
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Kurangi ruang setelah carousel Gili */
+    .experience {
+        padding-bottom: 25px !important;
+    }
+
+    /* Kurangi ruang sebelum Boat Experience */
+    .trips {
+        padding-top: 35px !important;
+    }
+
+}
+/* =====================================================
+   FIX JARAK BOAT CARD → CONTACT
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .trips {
+        padding-bottom: 5px !important;
+    }
+
+    .contact-section {
+        padding-top: 25px !important;
+    }
+
+}
+/* =========================================================
+   PREMIUM BRIGHTNESS BOOST
+   Tidak mengubah layout
+   ========================================================= */
+
+/* Background utama sedikit lebih terang */
+body {
+  background-color: #0a2133 !important;
+}
+
+/* Section gelap dibuat sedikit lebih hidup */
+.section-dark {
+  background-color: #0b2437 !important;
+}
+
+/* Section biasa */
+.section {
+  background-color: #0a2133;
+}
+
+/* Teks utama lebih terang */
+body,
+p,
+span,
+li {
+  color: #d5dde2;
+}
+
+/* Teks heading tetap putih premium */
+h1,
+h2,
+h3,
+h4 {
+  color: #f7f3ea;
+}
+
+/* Gold lebih terlihat */
+.eyebrow,
+.subtitle,
+.num,
+.meta {
+  color: #d8b63f;
+}
+
+/* Garis/card sedikit lebih terlihat */
+.feature-card,
+.spot-card,
+.hotel-card,
+.time-card,
+.audience,
+.fact {
+  border-color: rgba(216, 182, 63, 0.22);
+}
+
+/* Gambar sedikit lebih terang */
+img {
+  filter: brightness(1.08) saturate(1.05);
+}
+
+/* Jangan membuat gambar hero terlalu terang */
+.detail-hero img {
+  filter: brightness(1.05) saturate(1.05);
+}
+
+/* Tombol gold lebih hidup */
+.gold-button,
+button {
+  background-color: #d8b63f;
+  color: #071a2b;
+}
+
+/* Hover tombol */
+.gold-button:hover,
+button:hover {
+  background-color: #e4c653;
 }
