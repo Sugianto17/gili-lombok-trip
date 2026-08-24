@@ -1,0 +1,1052 @@
+/* =========================================================
+   PRIVATE SUNSET CRUISE
+   GILI LOMBOK TRIP
+========================================================= */
+
+:root {
+    --navy: #061522;
+    --navy-2: #081d2d;
+    --navy-dark: #03121e;
+    --card: #0b2639;
+
+    --gold: #d4af37;
+    --gold-light: #f0c94b;
+
+    --white: #f8f7f2;
+    --text: rgba(255,255,255,.78);
+    --muted: rgba(255,255,255,.56);
+
+    --line: rgba(255,255,255,.09);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+
+    background: var(--navy);
+    color: var(--white);
+
+    font-family:
+        "DM Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.sunset-nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+    height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background:
+        rgba(3,15,26,.72);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.sunset-logo {
+    color: var(--gold-light);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.sunset-back {
+    color: rgba(255,255,255,.75);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition: .3s ease;
+}
+
+.sunset-back:hover {
+    color: var(--gold-light);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sunset-hero {
+    position: relative;
+
+    min-height: 90vh;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    background: #020a11;
+}
+
+.sunset-hero-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.sunset-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2,12,20,.88),
+            rgba(2,12,20,.34) 58%,
+            rgba(2,12,20,.22)
+        ),
+        linear-gradient(
+            0deg,
+            rgba(2,12,20,.96),
+            transparent 63%
+        );
+}
+
+.sunset-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1160px,88%);
+
+    margin: 0 auto;
+
+    padding:
+        175px 0 85px;
+}
+
+.sunset-eyebrow {
+    margin-bottom: 14px;
+
+    color: var(--gold-light);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.sunset-hero h1 {
+    max-width: 900px;
+
+    margin: 0;
+
+    color: var(--white);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(58px,8vw,110px);
+
+    font-weight: 600;
+
+    line-height: .94;
+
+    text-shadow:
+        0 15px 45px rgba(0,0,0,.5);
+}
+
+.sunset-tag {
+    margin-top: 23px;
+
+    color: #edf2f3;
+
+    font-size: 16px;
+}
+
+.sunset-lead {
+    max-width: 650px;
+
+    margin-top: 14px;
+
+    color: rgba(255,255,255,.73);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.sunset-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+
+    margin-top: 28px;
+
+    padding:
+        0 27px;
+
+    background: var(--gold-light);
+
+    color: #071722;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+.sunset-button:hover {
+    background: #fff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.sunset-section {
+    width: min(1160px,88%);
+
+    margin: 0 auto;
+
+    padding:
+        105px 0;
+}
+
+.sunset-dark {
+    width: 100%;
+    max-width: none;
+
+    padding-left: 6%;
+    padding-right: 6%;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--navy-dark),
+            #061a29
+        );
+
+    border-top:
+        1px solid rgba(255,255,255,.05);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.05);
+}
+
+.sunset-heading {
+    max-width: 800px;
+
+    margin-bottom: 52px;
+}
+
+.sunset-heading h2 {
+    margin-bottom: 18px;
+
+    color: var(--white);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(42px,5.3vw,70px);
+
+    font-weight: 600;
+
+    line-height: 1.02;
+}
+
+.sunset-heading > p:last-child {
+    max-width: 720px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   PRICE CARDS
+========================================================= */
+
+.sunset-price-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.sunset-price-card {
+    position: relative;
+
+    min-height: 255px;
+
+    padding: 33px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b2639,
+            #071b2a
+        );
+
+    border:
+        1px solid rgba(212,175,55,.20);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease;
+}
+
+.sunset-price-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 45px;
+    height: 2px;
+
+    background: var(--gold);
+
+    transition: width .4s ease;
+}
+
+.sunset-price-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(212,175,55,.55);
+}
+
+.sunset-price-card:hover::before {
+    width: 100%;
+}
+
+.sunset-price-card > span {
+    color: var(--gold-light);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.sunset-price-card h3 {
+    margin:
+        18px 0 9px;
+
+    color: var(--white);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    line-height: 1.05;
+}
+
+.sunset-price-card p {
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.75;
+}
+
+.sunset-price-card strong {
+    display: block;
+
+    margin-top: 20px;
+
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.sunset-visual-section {
+    width: 100%;
+
+    padding:
+        0 6% 105px;
+
+    background: var(--navy);
+}
+
+.sunset-visual {
+    position: relative;
+
+    width: 100%;
+    max-width: 1450px;
+
+    height: 610px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+}
+
+.sunset-visual img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .8s ease;
+}
+
+.sunset-visual:hover img {
+    transform: scale(1.035);
+}
+
+.sunset-visual-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2,12,20,.82),
+            rgba(2,12,20,.20) 62%,
+            rgba(2,12,20,.18)
+        ),
+        linear-gradient(
+            0deg,
+            rgba(2,12,20,.85),
+            transparent 65%
+        );
+}
+
+.sunset-visual-content {
+    position: absolute;
+
+    left: 6%;
+    bottom: 70px;
+
+    z-index: 2;
+
+    max-width: 650px;
+}
+
+.sunset-visual-content h2 {
+    margin-bottom: 18px;
+
+    color: var(--white);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(44px,5vw,72px);
+
+    font-weight: 500;
+
+    line-height: 1.02;
+}
+
+.sunset-visual-content > p:last-child {
+    max-width: 580px;
+
+    color: rgba(255,255,255,.74);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TWO COLUMN
+========================================================= */
+
+.sunset-two-col {
+    display: grid;
+
+    grid-template-columns:
+        1.08fr .92fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.sunset-story p {
+    margin-bottom: 22px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+.sunset-facts {
+    border-top:
+        1px solid rgba(212,175,55,.24);
+}
+
+.sunset-fact {
+    display: grid;
+
+    grid-template-columns:
+        130px 1fr;
+
+    gap: 20px;
+
+    padding:
+        17px 0;
+
+    border-bottom:
+        1px solid var(--line);
+}
+
+.sunset-fact small {
+    color: var(--gold-light);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.sunset-fact span {
+    color: rgba(255,255,255,.82);
+
+    font-size: 12px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+========================================================= */
+
+.sunset-feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 18px;
+}
+
+.sunset-feature,
+.sunset-info-card {
+    position: relative;
+
+    min-height: 220px;
+
+    padding: 29px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.065),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease;
+}
+
+.sunset-feature::before,
+.sunset-info-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 42px;
+    height: 2px;
+
+    background: var(--gold);
+
+    transition: width .4s ease;
+}
+
+.sunset-feature:hover,
+.sunset-info-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(212,175,55,.48);
+}
+
+.sunset-feature:hover::before,
+.sunset-info-card:hover::before {
+    width: 100%;
+}
+
+.sunset-feature > span,
+.sunset-info-card > span {
+    color: var(--gold-light);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.sunset-feature h3,
+.sunset-info-card h3 {
+    margin:
+        20px 0 10px;
+
+    color: var(--white);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    line-height: 1.12;
+}
+
+.sunset-feature p,
+.sunset-info-card p {
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   BOOKING
+========================================================= */
+
+.sunset-booking {
+    display: grid;
+
+    grid-template-columns:
+        1fr auto;
+
+    gap: 35px;
+
+    align-items: center;
+
+    padding: 42px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #0b2639,
+            #071a28
+        );
+
+    border:
+        1px solid rgba(212,175,55,.25);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.18);
+}
+
+.sunset-booking h3 {
+    margin-bottom: 10px;
+
+    color: var(--white);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 36px;
+
+    font-weight: 500;
+}
+
+.sunset-booking > div > p:last-child {
+    max-width: 700px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+.sunset-booking .sunset-button {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.sunset-final {
+    padding:
+        130px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0,
+            rgba(212,175,55,.13),
+            transparent 38%
+        ),
+        #03121e;
+}
+
+.sunset-final h2 {
+    margin-bottom: 20px;
+
+    color: var(--white);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(46px,6vw,82px);
+
+    font-weight: 500;
+
+    line-height: 1.02;
+}
+
+.sunset-final > p:not(.sunset-eyebrow) {
+    max-width: 650px;
+
+    margin:
+        0 auto 30px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.sunset-final .sunset-button {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.sunset-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        28px 6%;
+
+    background: #020d16;
+
+    color:
+        rgba(255,255,255,.30);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    border-top:
+        1px solid rgba(255,255,255,.06);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .sunset-price-grid,
+    .sunset-feature-grid,
+    .sunset-info-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .sunset-two-col {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .sunset-booking {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .sunset-nav {
+        height: 65px;
+
+        padding:
+            0 18px;
+    }
+
+    .sunset-logo {
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .sunset-back {
+        font-size: 7px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .sunset-hero {
+        min-height: 720px;
+    }
+
+    .sunset-hero-content {
+        width: 90%;
+
+        padding:
+            140px 0 55px;
+    }
+
+    .sunset-hero h1 {
+        font-size:
+            clamp(45px,13vw,62px);
+    }
+
+    .sunset-tag {
+        font-size: 13px;
+    }
+
+    .sunset-lead {
+        font-size: 12px;
+    }
+
+    .sunset-hero .sunset-button {
+        width: 100%;
+    }
+
+
+    .sunset-section {
+        width: 90%;
+
+        padding:
+            75px 0;
+    }
+
+    .sunset-dark {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .sunset-heading {
+        margin-bottom: 35px;
+    }
+
+    .sunset-heading h2 {
+        font-size:
+            clamp(38px,11vw,50px);
+    }
+
+
+    .sunset-price-grid,
+    .sunset-feature-grid,
+    .sunset-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sunset-price-card,
+    .sunset-feature,
+    .sunset-info-card {
+        min-height: 200px;
+    }
+
+
+    .sunset-visual-section {
+        padding:
+            0 5% 75px;
+    }
+
+    .sunset-visual {
+        height: 470px;
+    }
+
+    .sunset-visual-content {
+        left: 25px;
+        right: 25px;
+        bottom: 35px;
+    }
+
+    .sunset-visual-content h2 {
+        font-size: 40px;
+    }
+
+
+    .sunset-fact {
+        grid-template-columns:
+            105px 1fr;
+    }
+
+    .sunset-fact span {
+        font-size: 11px;
+    }
+
+
+    .sunset-booking {
+        padding: 28px;
+
+        gap: 25px;
+    }
+
+    .sunset-booking h3 {
+        font-size: 30px;
+    }
+
+    .sunset-booking .sunset-button {
+        width: 100%;
+    }
+
+
+    .sunset-final {
+        padding:
+            90px 22px;
+    }
+
+    .sunset-final h2 {
+        font-size:
+            clamp(38px,11vw,52px);
+    }
+
+    .sunset-final .sunset-button {
+        width: 100%;
+    }
+
+
+    .sunset-footer {
+        flex-direction: column;
+
+        padding:
+            25px 20px;
+    }
+
+}

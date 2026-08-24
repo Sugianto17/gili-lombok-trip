@@ -1,0 +1,1745 @@
+/* =========================================================
+   GILI LOMBOK TRIP — ISLAND DETAIL
+   PREMIUM EDITION
+   Gili Trawangan / Gili Meno / Gili Air
+   ========================================================= */
+
+
+/* =========================================================
+   01. RESET
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #061725;
+  color: #f5f1e8;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   02. GLOBAL VARIABLES
+   ========================================================= */
+
+:root {
+  --bg: #061725;
+  --bg-deep: #03121d;
+  --bg-section: #071b2a;
+  --card: #0b2333;
+  --card-light: #0d293a;
+
+  --white: #f5f1e8;
+  --muted: #aebbc1;
+  --gold: #d8b43c;
+  --gold-light: #f0cf55;
+
+  --border: rgba(216, 180, 60, 0.30);
+  --soft-border: rgba(255, 255, 255, 0.07);
+
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: Arial, Helvetica, sans-serif;
+
+  --container: 1160px;
+}
+
+
+/* =========================================================
+   03. NAVIGATION
+   ========================================================= */
+
+.detail-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  width: 100%;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 42px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(2, 12, 20, 0.72),
+      rgba(2, 12, 20, 0)
+    );
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.detail-logo {
+  color: var(--gold);
+
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  transition: 0.3s ease;
+}
+
+.detail-logo:hover {
+  color: var(--gold-light);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: rgba(245, 241, 232, 0.75);
+
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+
+  transition: 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--gold);
+}
+
+
+/* =========================================================
+   04. LANGUAGE SWITCHER
+   ========================================================= */
+
+/*
+  Kalau HTML kamu sudah punya tombol ID / EN,
+  CSS ini langsung akan mempercantiknya.
+
+  Contoh class yang didukung:
+  .language-switcher
+  .lang-switcher
+  .lang
+  .language
+*/
+
+.language-switcher,
+.lang-switcher,
+.language {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.language-switcher a,
+.lang-switcher a,
+.language a,
+.language-switcher button,
+.lang-switcher button,
+.language button {
+  min-width: 28px;
+  height: 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 7px;
+
+  border: 1px solid transparent;
+
+  color: rgba(245, 241, 232, 0.55);
+
+  background: transparent;
+
+  font-family: var(--sans);
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.language-switcher a:hover,
+.lang-switcher a:hover,
+.language a:hover,
+.language-switcher button:hover,
+.lang-switcher button:hover,
+.language button:hover {
+  color: var(--white);
+}
+
+.language-switcher .active,
+.lang-switcher .active,
+.language .active,
+.language-switcher a[aria-current="page"],
+.lang-switcher a[aria-current="page"] {
+  color: #071522;
+
+  background: var(--gold);
+
+  border-color: var(--gold);
+}
+
+
+/* =========================================================
+   05. HERO
+   ========================================================= */
+
+.detail-hero {
+  position: relative;
+
+  min-height: 640px;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  background: #020d15;
+}
+
+.detail-hero > img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  filter: saturate(0.92) contrast(1.04);
+
+  transform: scale(1.015);
+}
+
+
+/* dark cinematic overlay */
+
+.detail-hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(2, 12, 20, 0.25) 0%,
+      rgba(2, 12, 20, 0.05) 30%,
+      rgba(2, 12, 20, 0.28) 58%,
+      rgba(2, 12, 20, 0.94) 100%
+    );
+}
+
+
+/* subtle blue atmospheric layer */
+
+.detail-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    radial-gradient(
+      circle at 70% 25%,
+      rgba(35, 120, 160, 0.12),
+      transparent 38%
+    );
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 3;
+
+  width: min(var(--container), calc(100% - 84px));
+
+  margin: 0 auto;
+
+  padding:
+    0 0
+    100px;
+}
+
+.eyebrow {
+  margin-bottom: 16px;
+
+  color: var(--gold);
+
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero-inner h1 {
+  max-width: 850px;
+
+  color: var(--white);
+
+  font-family: var(--serif);
+  font-size: clamp(58px, 7vw, 104px);
+
+  font-weight: 400;
+  line-height: 0.92;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 18px;
+}
+
+.hero-tag {
+  color: rgba(245, 241, 232, 0.88);
+
+  font-size: 11px;
+  letter-spacing: 1.5px;
+
+  margin-bottom: 16px;
+}
+
+.hero-lead {
+  max-width: 610px;
+
+  color: rgba(245, 241, 232, 0.72);
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   06. MAIN
+   ========================================================= */
+
+main {
+  width: 100%;
+}
+
+
+/* =========================================================
+   07. SECTION
+   ========================================================= */
+
+.section {
+  position: relative;
+
+  padding: 110px 0;
+
+  background: var(--bg);
+}
+
+.section-dark {
+  background: var(--bg-deep);
+}
+
+.section > * {
+  width: min(var(--container), calc(100% - 84px));
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   08. SECTION HEAD
+   ========================================================= */
+
+.section-head {
+  max-width: 850px;
+
+  margin-bottom: 54px;
+}
+
+.section-head.center {
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+.section-head h2 {
+  max-width: 850px;
+
+  color: var(--white);
+
+  font-family: var(--serif);
+  font-size: clamp(38px, 4vw, 62px);
+
+  font-weight: 400;
+  line-height: 0.96;
+
+  letter-spacing: -1.8px;
+
+  margin-bottom: 20px;
+}
+
+.section-head > p:last-child {
+  max-width: 690px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  line-height: 1.85;
+}
+
+.section-head.center > p:last-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   09. TWO COLUMN
+   ========================================================= */
+
+.two-col {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.45fr) minmax(250px, 0.75fr);
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+.story {
+  max-width: 720px;
+}
+
+.story p {
+  color: #bac6ca;
+
+  font-size: 12px;
+  line-height: 2;
+
+  margin-bottom: 22px;
+}
+
+.story p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   10. FACT LIST
+   ========================================================= */
+
+.fact-list {
+  border-top: 1px solid var(--soft-border);
+}
+
+.fact {
+  min-height: 58px;
+
+  display: grid;
+
+  grid-template-columns: 105px 1fr;
+
+  align-items: center;
+
+  gap: 20px;
+
+  border-bottom: 1px solid var(--soft-border);
+}
+
+.fact small {
+  color: var(--gold);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.fact span {
+  color: rgba(245, 241, 232, 0.72);
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   11. FEATURE GRID
+   ========================================================= */
+
+.feature-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid var(--border);
+}
+
+.feature-card {
+  position: relative;
+
+  min-height: 155px;
+
+  padding: 26px 24px;
+
+  background: rgba(10, 35, 50, 0.72);
+
+  border-right: 1px solid var(--soft-border);
+  border-bottom: 1px solid var(--soft-border);
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.feature-card:hover {
+  background: #0e2a3b;
+
+  transform: translateY(-3px);
+}
+
+.feature-card:nth-child(3n) {
+  border-right: 0;
+}
+
+.feature-card .num {
+  display: block;
+
+  color: var(--gold);
+
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  color: var(--white);
+
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 400;
+
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  max-width: 300px;
+
+  color: #82959d;
+
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   12. VISUAL STRIP
+   ========================================================= */
+
+.visual-strip {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 12px;
+}
+
+.visual {
+  position: relative;
+
+  min-height: 360px;
+
+  overflow: hidden;
+
+  background: #020d15;
+}
+
+.visual img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.visual:hover img {
+  transform: scale(1.035);
+}
+
+.visual::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(2, 10, 16, 0.9),
+      rgba(2, 10, 16, 0.02) 65%
+    );
+}
+
+.visual-caption {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 28px;
+  right: 28px;
+  bottom: 25px;
+}
+
+.visual-caption h3 {
+  color: var(--white);
+
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 400;
+
+  margin-bottom: 6px;
+}
+
+.visual-caption p {
+  max-width: 460px;
+
+  color: rgba(245, 241, 232, 0.66);
+
+  font-size: 9px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   13. SPOT GRID
+   ========================================================= */
+
+.spot-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.spot-card {
+  overflow: hidden;
+
+  background: var(--card);
+
+  border: 1px solid rgba(255, 255, 255, 0.045);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.spot-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(216, 180, 60, 0.25);
+}
+
+.spot-card > img {
+  height: 225px;
+
+  object-fit: cover;
+}
+
+.spot-body {
+  padding: 24px 22px 28px;
+}
+
+.spot-body .num {
+  color: var(--gold);
+
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+.spot-body h3 {
+  color: var(--white);
+
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 400;
+
+  margin-bottom: 10px;
+}
+
+.spot-body p {
+  color: #82959d;
+
+  font-size: 9px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   14. HOTEL
+   ========================================================= */
+
+.hotel-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.hotel-card {
+  min-height: 205px;
+
+  padding: 26px;
+
+  background: var(--card);
+
+  border: 1px solid rgba(255, 255, 255, 0.045);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-3px);
+
+  background: var(--card-light);
+}
+
+.hotel-card .num {
+  color: var(--gold);
+
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  margin-bottom: 22px;
+}
+
+.hotel-card h3 {
+  color: var(--white);
+
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+
+  margin-bottom: 10px;
+}
+
+.hotel-card .meta {
+  color: var(--gold);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+
+  margin-bottom: 15px;
+}
+
+.hotel-card p {
+  color: #82959d;
+
+  font-size: 9px;
+  line-height: 1.75;
+}
+
+.hotel-help {
+  margin-top: 12px;
+
+  padding: 18px 22px;
+
+  color: #84969e;
+
+  background: rgba(11, 35, 51, 0.7);
+
+  border-left: 1px solid var(--gold);
+
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.hotel-help strong {
+  color: var(--white);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   15. AUDIENCE
+   ========================================================= */
+
+.audience-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 2px;
+}
+
+.audience {
+  min-height: 75px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background: rgba(10, 35, 50, 0.68);
+
+  border: 1px solid rgba(255, 255, 255, 0.035);
+
+  transition: 0.3s ease;
+}
+
+.audience:hover {
+  background: #0d293a;
+}
+
+.audience strong {
+  color: var(--white);
+
+  font-family: var(--serif);
+  font-size: 11px;
+  font-weight: 400;
+
+  margin-bottom: 5px;
+}
+
+.audience span {
+  color: #71858e;
+
+  font-size: 7px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   16. TIMELINE
+   ========================================================= */
+
+.timeline {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  border-top: 1px solid var(--border);
+}
+
+.time-card {
+  min-height: 105px;
+
+  padding: 18px 13px;
+
+  border-right: 1px solid var(--soft-border);
+  border-bottom: 1px solid var(--soft-border);
+}
+
+.time-card:last-child {
+  border-right: 0;
+}
+
+.time-card small {
+  display: block;
+
+  color: var(--gold);
+
+  font-size: 7px;
+
+  margin-bottom: 13px;
+}
+
+.time-card strong {
+  display: block;
+
+  color: var(--white);
+
+  font-family: var(--serif);
+  font-size: 12px;
+  font-weight: 400;
+
+  margin-bottom: 6px;
+}
+
+.time-card span {
+  color: #71858e;
+
+  font-size: 7px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   17. BOOKING BOX
+   ========================================================= */
+
+.booking-box {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 45px;
+
+  padding: 34px 38px;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(11, 35, 51, 0.96),
+      rgba(8, 28, 41, 0.82)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.booking-box > div {
+  max-width: 780px;
+}
+
+.booking-box .eyebrow {
+  margin-bottom: 12px;
+}
+
+.booking-box h3 {
+  color: var(--white);
+
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+
+  margin-bottom: 10px;
+}
+
+.booking-box p:last-child {
+  color: #82959d;
+
+  font-size: 9px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   18. GOLD BUTTON
+   ========================================================= */
+
+.gold-button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 145px;
+  min-height: 42px;
+
+  padding: 0 22px;
+
+  color: #061522;
+
+  background: var(--gold);
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  box-shadow:
+    0 8px 25px rgba(216, 180, 60, 0.12);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gold-button:hover {
+  background: var(--gold-light);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(216, 180, 60, 0.20);
+}
+
+
+/* =========================================================
+   19. FINAL CTA
+   ========================================================= */
+
+.cta {
+  position: relative;
+
+  min-height: 430px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 30px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(216, 180, 60, 0.055),
+      transparent 35%
+    ),
+    #03121d;
+}
+
+.cta::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 1px;
+  height: 75px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(216, 180, 60, 0.6),
+      transparent
+    );
+}
+
+.cta .eyebrow {
+  margin-bottom: 18px;
+}
+
+.cta h2 {
+  color: var(--white);
+
+  font-family: var(--serif);
+  font-size: clamp(40px, 5vw, 66px);
+
+  font-weight: 400;
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 20px;
+}
+
+.cta > p:not(.eyebrow) {
+  max-width: 560px;
+
+  color: #82959d;
+
+  font-size: 10px;
+  line-height: 1.8;
+
+  margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   20. FOOTER
+   ========================================================= */
+
+.footer-mini {
+  min-height: 70px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 42px;
+
+  background: #020e17;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+
+  color: #6f6d52;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   21. SELECTION
+   ========================================================= */
+
+::selection {
+  color: #061522;
+  background: var(--gold);
+}
+
+
+/* =========================================================
+   22. SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020e17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #173443;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+
+/* =========================================================
+   23. TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .detail-nav {
+    padding: 0 25px;
+  }
+
+  .hero-inner {
+    width: min(100% - 50px, var(--container));
+
+    padding-bottom: 75px;
+  }
+
+  .section > * {
+    width: min(100% - 50px, var(--container));
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-card:nth-child(3n) {
+    border-right: 1px solid var(--soft-border);
+  }
+
+  .feature-card:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .spot-grid,
+  .hotel-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .spot-card:last-child,
+  .hotel-card:last-child {
+    grid-column: span 2;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .time-card:nth-child(3n) {
+    border-right: 0;
+  }
+
+  .booking-box {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   24. MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .detail-nav {
+    height: 62px;
+
+    padding: 0 18px;
+  }
+
+  .detail-logo {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .back-link {
+    max-width: 150px;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    text-align: right;
+  }
+
+  .detail-hero {
+    min-height: 570px;
+  }
+
+  .hero-inner {
+    width: calc(100% - 36px);
+
+    padding-bottom: 58px;
+  }
+
+  .hero-inner h1 {
+    font-size: clamp(48px, 14vw, 68px);
+
+    letter-spacing: -2px;
+  }
+
+  .hero-tag {
+    font-size: 9px;
+
+    line-height: 1.6;
+  }
+
+  .hero-lead {
+    max-width: 100%;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .section > * {
+    width: calc(100% - 36px);
+  }
+
+  .eyebrow {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 13px;
+  }
+
+  .section-head {
+    margin-bottom: 35px;
+  }
+
+  .section-head h2 {
+    font-size: 36px;
+
+    letter-spacing: -1.2px;
+
+    line-height: 0.98;
+  }
+
+  .section-head > p:last-child {
+    font-size: 9px;
+
+    line-height: 1.7;
+  }
+
+  .story p {
+    font-size: 10px;
+
+    line-height: 1.85;
+
+    margin-bottom: 18px;
+  }
+
+  .fact {
+    min-height: 50px;
+
+    grid-template-columns: 90px 1fr;
+
+    gap: 10px;
+  }
+
+  .fact small {
+    font-size: 7px;
+  }
+
+  .fact span {
+    font-size: 8px;
+  }
+
+
+  /* feature cards */
+
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature-card {
+    min-height: 145px;
+
+    padding: 20px 16px;
+  }
+
+  .feature-card .num {
+    margin-bottom: 14px;
+  }
+
+  .feature-card h3 {
+    font-size: 14px;
+  }
+
+  .feature-card p {
+    font-size: 8px;
+  }
+
+
+  /* visuals */
+
+  .visual-strip {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .visual {
+    min-height: 300px;
+  }
+
+  .visual-caption {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .visual-caption h3 {
+    font-size: 15px;
+  }
+
+
+  /* spots */
+
+  .spot-grid,
+  .hotel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spot-card:last-child,
+  .hotel-card:last-child {
+    grid-column: auto;
+  }
+
+  .spot-card > img {
+    height: 210px;
+  }
+
+
+  /* hotel */
+
+  .hotel-card {
+    min-height: auto;
+
+    padding: 22px;
+  }
+
+
+  /* audience */
+
+  .audience-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .audience {
+    min-height: 65px;
+  }
+
+
+  /* timeline */
+
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .time-card:nth-child(3n) {
+    border-right: 1px solid var(--soft-border);
+  }
+
+  .time-card:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .time-card {
+    min-height: 95px;
+  }
+
+
+  /* booking */
+
+  .booking-box {
+    padding: 25px 20px;
+
+    gap: 25px;
+  }
+
+  .booking-box h3 {
+    font-size: 19px;
+  }
+
+  .booking-box p:last-child {
+    font-size: 8px;
+  }
+
+  .gold-button {
+    width: 100%;
+  }
+
+
+  /* CTA */
+
+  .cta {
+    min-height: 380px;
+
+    padding: 80px 20px;
+  }
+
+  .cta h2 {
+    font-size: 40px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .cta > p:not(.eyebrow) {
+    font-size: 9px;
+  }
+
+
+  /* footer */
+
+  .footer-mini {
+    min-height: 90px;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 20px;
+
+    text-align: center;
+  }
+}
+
+
+/* =========================================================
+   25. VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .detail-nav {
+    padding: 0 14px;
+  }
+
+  .back-link {
+    max-width: 125px;
+
+    font-size: 6px;
+  }
+
+  .hero-inner h1 {
+    font-size: 46px;
+  }
+
+  .feature-card {
+    padding: 17px 13px;
+  }
+
+  .feature-card h3 {
+    font-size: 12px;
+  }
+
+  .feature-card p {
+    font-size: 7px;
+  }
+
+  .section-head h2 {
+    font-size: 32px;
+  }
+
+  .cta h2 {
+    font-size: 35px;
+  }
+}
+/* =========================================================
+   GILI MENO — FINAL VISUAL MATCH
+   ========================================================= */
+
+
+/* HERO LEBIH CINEMATIC */
+
+.detail-hero > img {
+  filter:
+    brightness(0.78)
+    saturate(0.92)
+    contrast(1.06);
+}
+
+.detail-hero::after {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(2, 10, 17, 0.30) 0%,
+      rgba(2, 10, 17, 0.08) 30%,
+      rgba(2, 10, 17, 0.32) 58%,
+      rgba(2, 10, 17, 0.96) 100%
+    );
+}
+
+
+/* HERO TEXT SEDIKIT LEBIH KE BAWAH */
+
+.hero-inner {
+  padding-bottom: 82px;
+}
+
+
+/* =========================================================
+   VISUAL EXPERIENCE
+   BIKIN SAMA PROPORSINYA DENGAN GILI TRAWANGAN
+   ========================================================= */
+
+.visual-strip {
+  grid-template-columns: 2fr 1fr;
+  height: 340px;
+  gap: 12px;
+}
+
+.visual {
+  min-height: 0;
+  height: 340px;
+}
+
+.visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* GAMBAR BESAR */
+
+.visual:first-child img {
+  object-position: center center;
+}
+
+
+/* GAMBAR KECIL */
+
+.visual:last-child img {
+  object-position: center center;
+}
+
+
+/* =========================================================
+   SECTION SPACING
+   ========================================================= */
+
+.section {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.section-head {
+  margin-bottom: 48px;
+}
+
+
+/* =========================================================
+   FEATURE CARD SEDIKIT LEBIH PADAT
+   ========================================================= */
+
+.feature-card {
+  min-height: 145px;
+  padding: 23px 22px;
+}
+
+.feature-card .num {
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   SPOT IMAGE
+   ========================================================= */
+
+.spot-card > img {
+  height: 205px;
+}
+
+
+/* =========================================================
+   HOTEL LEBIH PADAT
+   ========================================================= */
+
+.hotel-card {
+  min-height: 190px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta {
+  min-height: 400px;
+}
+
+
+/* =========================================================
+   DESKTOP BESAR
+   ========================================================= */
+
+@media (min-width: 1100px) {
+
+  .detail-hero {
+    min-height: 610px;
+  }
+
+  .hero-inner {
+    padding-bottom: 86px;
+  }
+
+  .visual-strip {
+    height: 350px;
+  }
+
+  .visual {
+    height: 350px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .visual-strip {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .visual:first-child {
+    height: 300px;
+  }
+
+  .visual:last-child {
+    height: 260px;
+  }
+
+  .spot-card > img {
+    height: 210px;
+  }
+
+}
+/* =========================================================
+   FINAL GILI MENO — CINEMATIC FINISH
+   ========================================================= */
+
+.detail-hero > img {
+  filter:
+    brightness(0.72)
+    saturate(0.92)
+    contrast(1.08);
+}
+
+.detail-hero::after {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(2, 10, 17, 0.28) 0%,
+      rgba(2, 10, 17, 0.05) 28%,
+      rgba(2, 10, 17, 0.22) 52%,
+      rgba(2, 10, 17, 0.96) 100%
+    );
+}
+
+.hero-inner h1 {
+  text-shadow:
+    0 4px 22px rgba(0, 0, 0, 0.45);
+}
+
+.gold-button {
+  box-shadow:
+    0 6px 22px rgba(216, 180, 60, 0.16);
+}
+
+.gold-button:hover {
+  box-shadow:
+    0 10px 30px rgba(216, 180, 60, 0.25);
+}

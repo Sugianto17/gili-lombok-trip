@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Pengalaman Large Glass Boat di sekitar Kepulauan Gili. Transfer private dan snorkeling untuk rombongan hingga 25 tamu."
+    >
+
+    <meta
+        name="theme-color"
+        content="#061522"
+    >
+
+    <title>Large Glass Boat | Gili Lombok Trip</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="island-detail.css"
+    >
+
+    <style>
+
+        .glass-page {
+            background: #061522;
+        }
+
+        .glass-hero {
+            position: relative;
+            min-height: 88vh;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .glass-hero-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .glass-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(2,14,24,.90),
+                    rgba(2,14,24,.38) 58%,
+                    rgba(2,14,24,.42)
+                ),
+                linear-gradient(
+                    0deg,
+                    rgba(2,14,24,.95),
+                    transparent 62%
+                );
+        }
+
+        .glass-hero-content {
+            position: relative;
+            z-index: 2;
+            width: min(1160px,88%);
+            margin: 0 auto;
+            padding: 170px 0 90px;
+        }
+
+        .glass-eyebrow {
+            margin: 0 0 16px;
+            color: #f0c94b;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .glass-hero h1 {
+            margin: 0;
+            max-width: 900px;
+            color: #f8f7f2;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(58px,8vw,108px);
+
+            line-height: .95;
+            font-weight: 600;
+        }
+
+        .glass-hero-tag {
+            margin: 24px 0 0;
+            color: #edf2f3;
+            font-size: 17px;
+        }
+
+        .glass-hero-text {
+            max-width: 680px;
+            margin: 16px 0 0;
+            color: #c8d6db;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .glass-section {
+            width: min(1160px,88%);
+            margin: 0 auto;
+            padding: 105px 0;
+        }
+
+        .glass-dark {
+            width: 100%;
+            max-width: none;
+            padding-left: 6%;
+            padding-right: 6%;
+            background: #03121e;
+
+            border-top:
+                1px solid rgba(255,255,255,.05);
+
+            border-bottom:
+                1px solid rgba(255,255,255,.05);
+        }
+
+        .glass-heading {
+            max-width: 800px;
+            margin-bottom: 50px;
+        }
+
+        .glass-heading.center {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .glass-heading h2 {
+            margin: 0 0 18px;
+            color: #f8f7f2;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(42px,5.4vw,70px);
+
+            line-height: 1.02;
+            font-weight: 600;
+        }
+
+        .glass-heading p:last-child {
+            max-width: 720px;
+            color: #92a4ae;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .glass-rate-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .glass-rate-card {
+            padding: 34px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #0b2639,
+                    #071b2a
+                );
+
+            border:
+                1px solid rgba(216,173,45,.20);
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease;
+        }
+
+        .glass-rate-card:hover {
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(216,173,45,.55);
+        }
+
+        .glass-rate-card span {
+            display: block;
+            color: #f0c94b;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .glass-rate-card h3 {
+            margin: 18px 0 8px;
+            color: #f8f7f2;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size: 38px;
+            line-height: 1;
+        }
+
+        .glass-rate-card p {
+            margin: 0;
+            color: #92a4ae;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .glass-rate-highlight {
+            margin-top: 15px;
+            color: #f0c94b !important;
+            font-size: 9px !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .glass-video-section {
+            width: 100%;
+            padding: 115px 6%;
+
+            background:
+                radial-gradient(
+                    circle at 50% 0,
+                    rgba(14,55,78,.32),
+                    transparent 42%
+                ),
+                #061522;
+        }
+
+        .glass-video-header {
+            width: min(820px,100%);
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .glass-video-header h2 {
+            margin: 0 0 18px;
+            color: #f8f7f2;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(42px,5.4vw,68px);
+
+            line-height: 1.02;
+        }
+
+        .glass-video-header p:last-child {
+            color: #92a4ae;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .glass-video-grid {
+            width: min(1200px,100%);
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .glass-video-card {
+            overflow: hidden;
+            background: #081e2e;
+
+            border:
+                1px solid rgba(255,255,255,.08);
+
+            transition:
+                transform .35s ease,
+                border-color .35s ease;
+        }
+
+        .glass-video-card:hover {
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(216,173,45,.45);
+        }
+
+        .glass-video-frame {
+            position: relative;
+            background: #020a11;
+            aspect-ratio: 16 / 10;
+        }
+
+        .glass-video-frame video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .glass-video-info {
+            padding: 24px;
+        }
+
+        .glass-video-info span {
+            color: #f0c94b;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .glass-video-info h3 {
+            margin: 14px 0 8px;
+            color: #f8f7f2;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size: 26px;
+        }
+
+        .glass-video-info p {
+            margin: 0;
+            color: #92a4ae;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .glass-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 18px;
+        }
+
+        .glass-info-card {
+            padding: 32px;
+            background: #081f30;
+
+            border:
+                1px solid rgba(255,255,255,.08);
+        }
+
+        .glass-info-number {
+            color: #f0c94b;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size: 42px;
+        }
+
+        .glass-info-card h3 {
+            margin: 10px 0 8px;
+            color: #f8f7f2;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size: 24px;
+        }
+
+        .glass-info-card p {
+            margin: 0;
+            color: #92a4ae;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .glass-note {
+            margin-top: 24px;
+            padding: 25px 28px;
+
+            border-left:
+                2px solid #d4af37;
+
+            background:
+                rgba(216,173,45,.045);
+
+            color: #c8d4d9;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .glass-note strong {
+            color: #f0c94b;
+        }
+
+        .glass-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 18px;
+        }
+
+        .glass-feature {
+            padding: 30px;
+            background: #081e2e;
+
+            border:
+                1px solid rgba(255,255,255,.08);
+        }
+
+        .glass-feature span {
+            color: #f0c94b;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .glass-feature h3 {
+            margin: 19px 0 8px;
+            color: #f8f7f2;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size: 24px;
+        }
+
+        .glass-feature p {
+            margin: 0;
+            color: #92a4ae;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .glass-two-col {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 75px;
+            align-items: start;
+        }
+
+        .glass-story p {
+            margin: 0 0 22px;
+            color: #d6e0e5;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .glass-facts {
+            border-top:
+                1px solid rgba(216,173,45,.25);
+        }
+
+        .glass-fact {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 20px;
+            padding: 17px 0;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.08);
+        }
+
+        .glass-fact small {
+            color: #f0c94b;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .glass-fact span {
+            color: #e7edef;
+            font-size: 12px;
+            text-align: right;
+        }
+
+        .glass-booking {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            align-items: center;
+            padding: 42px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #0b2639,
+                    #071a28
+                );
+
+            border:
+                1px solid rgba(216,173,45,.25);
+        }
+
+        .glass-booking h2 {
+            margin: 0 0 12px;
+            color: #f8f7f2;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size: 36px;
+            line-height: 1.05;
+        }
+
+        .glass-booking p {
+            max-width: 720px;
+            margin: 0;
+            color: #92a4ae;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .glass-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 52px;
+            padding: 0 28px;
+
+            background: #f0c94b;
+            color: #071722;
+
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            transition:
+                transform .25s ease,
+                background .25s ease;
+        }
+
+        .glass-button:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .glass-final {
+            padding: 125px 20px;
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at 50% 0,
+                    rgba(216,173,45,.10),
+                    transparent 38%
+                ),
+                #03121e;
+        }
+
+        .glass-final h2 {
+            margin: 0 auto 18px;
+            color: #f8f7f2;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(46px,6vw,82px);
+
+            line-height: 1;
+        }
+
+        .glass-final p {
+            max-width: 650px;
+            margin: 0 auto 32px;
+            color: #92a4ae;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .glass-footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 28px 6vw;
+
+            background: #04131f;
+            color: #71828c;
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+
+        /* LANGUAGE SWITCH */
+
+        .language-switch {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-left: 18px;
+            white-space: nowrap;
+        }
+
+        .language-switch button {
+            border: 0;
+            background: transparent;
+            color: rgba(255,255,255,.45);
+            cursor: pointer;
+            padding: 0;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .language-switch button.active {
+            color: #f0c94b;
+        }
+
+        .language-switch span {
+            color: rgba(255,255,255,.25);
+        }
+
+        @media (max-width: 950px) {
+
+            .glass-rate-grid,
+            .glass-video-grid,
+            .glass-info-grid,
+            .glass-feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .glass-two-col {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .glass-booking {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .detail-nav {
+                height: 68px;
+                padding: 0 5vw;
+            }
+
+            .back-link {
+                font-size: 8px;
+            }
+
+            .language-switch {
+                margin-left: 8px;
+                gap: 5px;
+            }
+
+            .language-switch button {
+                font-size: 8px;
+            }
+
+            .glass-hero-content {
+                padding: 145px 0 65px;
+            }
+
+            .glass-hero h1 {
+                font-size: 56px;
+            }
+
+            .glass-section {
+                padding: 78px 0;
+            }
+
+            .glass-dark {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .glass-rate-grid,
+            .glass-video-grid,
+            .glass-info-grid,
+            .glass-feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .glass-video-section {
+                padding: 80px 5%;
+            }
+
+            .glass-booking {
+                padding: 28px;
+            }
+
+            .glass-button {
+                width: 100%;
+            }
+
+            .glass-fact {
+                grid-template-columns: 115px 1fr;
+            }
+
+            .glass-fact span {
+                font-size: 11px;
+            }
+
+            .glass-final {
+                padding: 90px 20px;
+            }
+
+            .glass-footer {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body class="glass-page">
+
+    <!-- NAVIGATION -->
+
+    <nav class="detail-nav">
+
+        <a
+            href="index.html"
+            class="detail-logo"
+        >
+            GILI LOMBOK
+        </a>
+
+        <a
+            href="index.html#trips"
+            class="back-link"
+        >
+            ← BACK TO EXPERIENCES
+        </a>
+
+        <div class="language-switch">
+
+            <button
+                id="idBtn"
+                class="active"
+                onclick="setLanguage('id')"
+            >
+                ID
+            </button>
+
+            <span>|</span>
+
+            <button
+                id="enBtn"
+                onclick="setLanguage('en')"
+            >
+                EN
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <header class="glass-hero">
+
+        <img
+            src="glassboat.jpg"
+            alt="Large Glass Boat di Kepulauan Gili"
+            class="glass-hero-image"
+        >
+
+        <div class="glass-hero-content">
+
+            <p class="glass-eyebrow">
+                PENGALAMAN LARGE GLASS BOAT
+            </p>
+
+            <h1>
+                Large<br>
+                Glass Boat
+            </h1>
+
+            <p class="glass-hero-tag">
+                Kepulauan Gili • Hingga 25 Tamu
+            </p>
+
+            <p class="glass-hero-text">
+                Glass-bottom boat berukuran besar dan luas untuk
+                transfer private dan pengalaman snorkeling di Gili,
+                ideal untuk keluarga, teman dan rombongan besar.
+            </p>
+
+        </div>
+
+    </header>
+        <!-- PRICING -->
+
+    <section class="glass-section">
+
+        <div class="glass-heading">
+
+            <p class="glass-eyebrow">
+                HARGA LARGE GLASS BOAT
+            </p>
+
+            <h2>
+                Pilih pengalaman<br>
+                Anda.
+            </h2>
+
+            <p>
+                Tersedia pilihan fleksibel sesuai kebutuhan
+                rombongan, baik untuk transfer ke Gili maupun
+                pengalaman snorkeling tiga Gili.
+            </p>
+
+        </div>
+
+
+        <div class="glass-rate-grid">
+
+            <article class="glass-rate-card">
+
+                <span>
+                    TRANSFER GILI
+                </span>
+
+                <h3>
+                    IDR 1.300K
+                </h3>
+
+                <p>
+                    Pulang-pergi / PP ke Kepulauan Gili.
+                    Maksimal 25 tamu.
+                    Tanpa snorkeling.
+                </p>
+
+                <p class="glass-rate-highlight">
+                    HINGGA 25 TAMU
+                </p>
+
+            </article>
+
+
+            <article class="glass-rate-card">
+
+                <span>
+                    SNORKELING • 1–15 TAMU
+                </span>
+
+                <h3>
+                    IDR 1.700K
+                </h3>
+
+                <p>
+                    Pengalaman snorkeling tiga Gili
+                    dengan gratis 10 masker + kamera.
+                </p>
+
+                <p class="glass-rate-highlight">
+                    GRATIS MASKER + KAMERA
+                </p>
+
+            </article>
+
+
+            <article class="glass-rate-card">
+
+                <span>
+                    SNORKELING • 16–25 TAMU
+                </span>
+
+                <h3>
+                    IDR 2.000K
+                </h3>
+
+                <p>
+                    Pengalaman snorkeling tiga Gili
+                    dengan gratis 10 masker + kamera.
+                </p>
+
+                <p class="glass-rate-highlight">
+                    + IDR 150K PEMANDU
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIDEO SECTION -->
+
+    <section class="glass-video-section">
+
+        <div class="glass-video-header">
+
+            <p class="glass-eyebrow">
+                LIHAT PENGALAMANNYA
+            </p>
+
+            <h2>
+                Nikmati keindahan Gili<br>
+                dari atas air.
+            </h2>
+
+            <p>
+                Lihat lebih dekat Large Glass Boat,
+                pengalaman snorkeling dan keindahan
+                Kepulauan Gili.
+            </p>
+
+        </div>
+
+
+        <div class="glass-video-grid">
+
+
+            <!-- VIDEO 01 -->
+
+            <article class="glass-video-card">
+
+                <div class="glass-video-frame">
+
+                    <video
+                        controls
+                        playsinline
+                        preload="metadata"
+                    >
+
+                        <source
+                            src="large-glass-boat-video.mp4"
+                            type="video/mp4"
+                        >
+
+                        Browser Anda tidak mendukung video.
+
+                    </video>
+
+                </div>
+
+                <div class="glass-video-info">
+
+                    <span>
+                        01 • GLASS BOAT
+                    </span>
+
+                    <h3>
+                        Large Glass Boat
+                    </h3>
+
+                    <p>
+                        Lihat seperti apa pengalaman
+                        Large Glass Boat sebelum perjalanan Anda.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 02 -->
+
+            <article class="glass-video-card">
+
+                <div class="glass-video-frame">
+
+                    <video
+                        controls
+                        playsinline
+                        preload="metadata"
+                    >
+
+                        <source
+                            src="glassboat-snorkeling.mp4"
+                            type="video/mp4"
+                        >
+
+                        Browser Anda tidak mendukung video.
+
+                    </video>
+
+                </div>
+
+                <div class="glass-video-info">
+
+                    <span>
+                        02 • SNORKELING
+                    </span>
+
+                    <h3>
+                        Pengalaman Snorkeling
+                    </h3>
+
+                    <p>
+                        Jelajahi dunia bawah laut
+                        di sekitar tiga Kepulauan Gili.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 03 -->
+
+            <article class="glass-video-card">
+
+                <div class="glass-video-frame">
+
+                    <video
+                        controls
+                        playsinline
+                        preload="metadata"
+                    >
+
+                        <source
+                            src="gili-islands-video.mp4"
+                            type="video/mp4"
+                        >
+
+                        Browser Anda tidak mendukung video.
+
+                    </video>
+
+                </div>
+
+                <div class="glass-video-info">
+
+                    <span>
+                        03 • KEPULAUAN GILI
+                    </span>
+
+                    <h3>
+                        Gili dari Atas Air
+                    </h3>
+
+                    <p>
+                        Gambaran laut, pulau dan
+                        momen tak terlupakan Anda.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CAPACITY -->
+
+    <section class="glass-section glass-dark">
+
+        <div class="glass-heading">
+
+            <p class="glass-eyebrow">
+                KAPASITAS & JUMLAH ROMBONGAN
+            </p>
+
+            <h2>
+                Dibuat untuk<br>
+                rombongan besar.
+            </h2>
+
+            <p>
+                Large Glass Boat dirancang untuk rombongan
+                yang ingin bepergian bersama dengan tetap
+                nyaman dan mudah diatur.
+            </p>
+
+        </div>
+
+
+        <div class="glass-info-grid">
+
+            <article class="glass-info-card">
+
+                <div class="glass-info-number">
+                    25
+                </div>
+
+                <h3>
+                    Maksimal Tamu
+                </h3>
+
+                <p>
+                    Kapasitas maksimal Large Glass Boat.
+                </p>
+
+            </article>
+
+
+            <article class="glass-info-card">
+
+                <div class="glass-info-number">
+                    15
+                </div>
+
+                <h3>
+                    Snorkeling Standar
+                </h3>
+
+                <p>
+                    Rombongan 1–15 tamu menggunakan
+                    harga snorkeling standar.
+                </p>
+
+            </article>
+
+
+            <article class="glass-info-card">
+
+                <div class="glass-info-number">
+                    16–25
+                </div>
+
+                <h3>
+                    Rombongan Besar
+                </h3>
+
+                <p>
+                    Rombongan 16–25 membutuhkan
+                    satu pemandu tambahan.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <div class="glass-note">
+
+            <strong>
+                INFORMASI PENTING ROMBONGAN
+            </strong>
+
+            <br><br>
+
+            Untuk rombongan 16–25 tamu,
+            diperlukan satu pemandu tambahan
+            dengan biaya <strong>IDR 150K</strong>.
+
+        </div>
+
+    </section>
+        <!-- SNORKELING -->
+
+    <section class="glass-section">
+
+        <div class="glass-heading">
+
+            <p class="glass-eyebrow">
+                DETAIL SNORKELING
+            </p>
+
+            <h2>
+                Satu hari penuh<br>
+                di atas air.
+            </h2>
+
+            <p>
+                Jelajahi tiga Kepulauan Gili menggunakan
+                glass-bottom boat yang luas dan nikmati
+                pemandangan dunia bawah laut yang jernih.
+            </p>
+
+        </div>
+
+
+        <div class="glass-feature-grid">
+
+
+            <article class="glass-feature">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Tiga Kepulauan Gili
+                </h3>
+
+                <p>
+                    Jelajahi lokasi snorkeling di sekitar
+                    Gili Trawangan, Gili Meno dan Gili Air.
+                </p>
+
+            </article>
+
+
+            <article class="glass-feature">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Peralatan Gratis
+                </h3>
+
+                <p>
+                    Harga snorkeling sudah termasuk
+                    10 masker dan kamera.
+                </p>
+
+            </article>
+
+
+            <article class="glass-feature">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Selesai Pukul 15.00
+                </h3>
+
+                <p>
+                    Pengalaman snorkeling harus
+                    selesai sebelum pukul 15.00.
+                </p>
+
+            </article>
+
+
+            <article class="glass-feature">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Boat Luas
+                </h3>
+
+                <p>
+                    Nyaman untuk keluarga,
+                    teman dan rombongan besar.
+                </p>
+
+            </article>
+
+
+            <article class="glass-feature">
+
+                <span>
+                    05
+                </span>
+
+                <h3>
+                    Pengalaman Private
+                </h3>
+
+                <p>
+                    Nikmati boat secara eksklusif
+                    bersama rombongan Anda sendiri.
+                </p>
+
+            </article>
+
+
+            <article class="glass-feature">
+
+                <span>
+                    06
+                </span>
+
+                <h3>
+                    Perencanaan Fleksibel
+                </h3>
+
+                <p>
+                    Beri tahu jumlah rombongan dan tanggal
+                    perjalanan, lalu kami akan mengaturnya.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- EQUIPMENT -->
+
+    <section class="glass-section glass-dark">
+
+        <div class="glass-heading">
+
+            <p class="glass-eyebrow">
+                PERALATAN
+            </p>
+
+            <h2>
+                Semua yang Anda<br>
+                perlukan.
+            </h2>
+
+        </div>
+
+
+        <div class="glass-feature-grid">
+
+
+            <article class="glass-feature">
+
+                <span>
+                    TERMASUK
+                </span>
+
+                <h3>
+                    Pelampung
+                </h3>
+
+                <p>
+                    Gratis.
+                </p>
+
+            </article>
+
+
+            <article class="glass-feature">
+
+                <span>
+                    OPSIONAL
+                </span>
+
+                <h3>
+                    Masker
+                </h3>
+
+                <p>
+                    IDR 15K / unit.
+                </p>
+
+            </article>
+
+
+            <article class="glass-feature">
+
+                <span>
+                    OPSIONAL
+                </span>
+
+                <h3>
+                    Kaki Katak
+                </h3>
+
+                <p>
+                    IDR 15K / unit.
+                </p>
+
+            </article>
+
+
+            <article class="glass-feature">
+
+                <span>
+                    OPSIONAL
+                </span>
+
+                <h3>
+                    GoPro
+                </h3>
+
+                <p>
+                    IDR 150K.
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="glass-note">
+
+            <strong>
+                INFORMASI PERALATAN
+            </strong>
+
+            <br><br>
+
+            Paket snorkeling standar sudah termasuk
+            10 masker dan kamera. Peralatan tambahan
+            dapat diminta saat melakukan pemesanan.
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section class="glass-section">
+
+        <div class="glass-heading">
+
+            <p class="glass-eyebrow">
+                PENGALAMAN
+            </p>
+
+            <h2>
+                Lebih luas.<br>
+                Lebih bebas.
+            </h2>
+
+        </div>
+
+
+        <div class="glass-two-col">
+
+
+            <div class="glass-story">
+
+                <p>
+                    Large Glass Boat merupakan pilihan yang cocok
+                    untuk keluarga, teman dan rombongan besar yang
+                    ingin tetap bersama selama menikmati pengalaman
+                    di Gili.
+                </p>
+
+                <p>
+                    Untuk transfer antar pulau, boat dapat digunakan
+                    untuk perjalanan pulang-pergi ke Kepulauan Gili
+                    tanpa snorkeling.
+                </p>
+
+                <p>
+                    Untuk snorkeling, boat memberikan pengalaman
+                    yang luas dan nyaman untuk rombongan sekaligus
+                    memungkinkan Anda menikmati pemandangan
+                    bawah laut yang jernih.
+                </p>
+
+                <p>
+                    Beri tahu jumlah rombongan dan tanggal yang
+                    Anda inginkan, lalu kami akan membantu mengatur
+                    pengalaman yang paling sesuai.
+                </p>
+
+            </div>
+
+
+            <div class="glass-facts">
+
+                <div class="glass-fact">
+                    <small>JENIS</small>
+                    <span>Large Glass Boat</span>
+                </div>
+
+                <div class="glass-fact">
+                    <small>KAPASITAS</small>
+                    <span>Hingga 25 tamu</span>
+                </div>
+
+                <div class="glass-fact">
+                    <small>TRANSFER</small>
+                    <span>IDR 1.300K PP</span>
+                </div>
+
+                <div class="glass-fact">
+                    <small>SNORKEL 1–15</small>
+                    <span>IDR 1.700K</span>
+                </div>
+
+                <div class="glass-fact">
+                    <small>SNORKEL 16–25</small>
+                    <span>IDR 2.000K</span>
+                </div>
+
+                <div class="glass-fact">
+                    <small>PEMANDU</small>
+                    <span>+ IDR 150K untuk 16–25 tamu</span>
+                </div>
+
+                <div class="glass-fact">
+                    <small>WAKTU</small>
+                    <span>Snorkeling selesai sebelum 15.00</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- BEFORE YOU BOOK -->
+
+    <section class="glass-section glass-dark">
+
+        <div class="glass-heading">
+
+            <p class="glass-eyebrow">
+                SEBELUM MEMESAN
+            </p>
+
+            <h2>
+                Beberapa hal<br>
+                yang perlu diketahui.
+            </h2>
+
+        </div>
+
+
+        <div class="glass-feature-grid">
+
+            <article class="glass-feature">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Maksimal 25 Tamu
+                </h3>
+
+                <p>
+                    Kapasitas maksimal untuk
+                    Large Glass Boat.
+                </p>
+
+            </article>
+
+
+            <article class="glass-feature">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Selesai Sebelum 15.00
+                </h3>
+
+                <p>
+                    Aktivitas snorkeling harus
+                    selesai sebelum pukul 15.00.
+                </p>
+
+            </article>
+
+
+            <article class="glass-feature">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Rombongan Besar
+                </h3>
+
+                <p>
+                    Rombongan 16–25 tamu membutuhkan
+                    satu pemandu tambahan.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING -->
+
+    <section class="glass-section">
+
+        <div class="glass-booking">
+
+            <div>
+
+                <p class="glass-eyebrow">
+                    SIAP BERANGKAT?
+                </p>
+
+                <h2>
+                    Pesan<br>
+                    Large Glass Boat Anda.
+                </h2>
+
+                <p>
+                    Kirimkan tanggal, jumlah tamu, tujuan
+                    dan apakah Anda membutuhkan transfer
+                    atau pengalaman snorkeling. Kami akan
+                    mengonfirmasi detailnya bersama Anda.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/6287754650609?text=Halo%20Gili%20Lombok%20Trip%2C%20saya%20ingin%20memesan%20Large%20Glass%20Boat"
+                class="glass-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                PESAN VIA WHATSAPP
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+
+    <section class="glass-final">
+
+        <p class="glass-eyebrow">
+            GILI LOMBOK TRIP
+        </p>
+
+        <h2>
+            Pengalaman Gili Anda<br>
+            dimulai di sini.
+        </h2>
+
+        <p>
+            Transfer dengan glass boat, snorkeling
+            dan pengalaman private untuk rombongan
+            di sekitar Kepulauan Gili.
+        </p>
+
+        <a
+            href="https://wa.me/6287754650609?text=Halo%20Gili%20Lombok%20Trip%2C%20saya%20ingin%20bertanya%20tentang%20Large%20Glass%20Boat"
+            class="glass-button"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            CHAT DENGAN KAMI
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="glass-footer">
+
+        <span>
+            GILI LOMBOK
+        </span>
+
+        <span>
+            PRIVATE BOAT • SNORKELING • KEPULAUAN GILI
+        </span>
+
+    </footer>
+
+<script>
+function setLanguage(lang) {
+
+    if (lang === "id") {
+        location.reload();
+        return;
+    }
+
+    const translations = {
+
+        /* NAVIGATION */
+        "← KEMBALI KE PENGALAMAN": "← BACK TO EXPERIENCES",
+
+        /* HERO */
+        "PENGALAMAN LARGE GLASS BOAT": "LARGE GLASS BOAT EXPERIENCE",
+        "Kepulauan Gili • Hingga 25 Tamu": "Gili Islands • Up to 25 Guests",
+        "Glass-bottom boat berukuran besar dan luas untuk transfer private dan pengalaman snorkeling di Gili, ideal untuk keluarga, teman dan rombongan besar.":
+        "A spacious glass-bottom boat for private transfers and snorkeling experiences around the Gili Islands, ideal for families, friends and large groups.",
+
+        /* PRICING */
+        "HARGA LARGE GLASS BOAT": "LARGE GLASS BOAT PRICING",
+        "Pilih pengalaman\nAnda.": "Choose your experience.",
+        "Tersedia pilihan fleksibel sesuai kebutuhan rombongan, baik untuk transfer ke Gili maupun pengalaman snorkeling tiga Gili.":
+        "Flexible options are available for your group, whether you need a transfer to the Gili Islands or a three-island snorkeling experience.",
+
+        "TRANSFER GILI": "GILI TRANSFER",
+        "HINGGA 25 TAMU": "UP TO 25 GUESTS",
+        "SNORKELING • 1–15 TAMU": "SNORKELING • 1–15 GUESTS",
+        "SNORKELING • 16–25 TAMU": "SNORKELING • 16–25 GUESTS",
+        "GRATIS MASKER + KAMERA": "FREE MASKS + CAMERA",
+        "+ IDR 150K PEMANDU": "+ IDR 150K GUIDE",
+
+        /* VIDEO */
+        "LIHAT PENGALAMANNYA": "SEE THE EXPERIENCE",
+        "Nikmati keindahan Gili\ndari atas air.": "Experience the beauty of the Gili Islands\nfrom the water.",
+        "Lihat lebih dekat Large Glass Boat, pengalaman snorkeling dan keindahan Kepulauan Gili.":
+        "Take a closer look at the Large Glass Boat, snorkeling experience and the beauty of the Gili Islands.",
+
+        "Pengalaman Snorkeling": "Snorkeling Experience",
+        "Gili dari Atas Air": "The Gili Islands from the Water",
+        "Lihat seperti apa pengalaman Large Glass Boat sebelum perjalanan Anda.":
+        "See what the Large Glass Boat experience is like before your journey.",
+        "Jelajahi dunia bawah laut di sekitar tiga Kepulauan Gili.":
+        "Explore the underwater world around the three Gili Islands.",
+        "Gambaran laut, pulau dan momen tak terlupakan Anda.":
+        "A glimpse of the sea, islands and your unforgettable moments.",
+
+        /* CAPACITY */
+        "KAPASITAS & JUMLAH ROMBONGAN": "GROUP SIZE & CAPACITY",
+        "Dibuat untuk\nrombongan besar.": "Designed for\nlarge groups.",
+        "Large Glass Boat dirancang untuk rombongan yang ingin bepergian bersama dengan tetap nyaman dan mudah diatur.":
+        "The Large Glass Boat is designed for groups who want to travel together in comfort.",
+
+        "Maksimal Tamu": "Maximum Guests",
+        "Snorkeling Standar": "Standard Snorkeling",
+        "Rombongan Besar": "Large Group",
+        "Kapasitas maksimal Large Glass Boat.": "Maximum capacity of the Large Glass Boat.",
+        "Rombongan 1–15 tamu menggunakan harga snorkeling standar.":
+        "Groups of 1–15 guests use the standard snorkeling rate.",
+        "Rombongan 16–25 membutuhkan satu pemandu tambahan.":
+        "Groups of 16–25 guests require one additional guide.",
+
+        "INFORMASI PENTING ROMBONGAN": "IMPORTANT GROUP INFORMATION",
+
+        /* SNORKELING */
+        "DETAIL SNORKELING": "SNORKELING DETAILS",
+        "Satu hari penuh\ndi atas air.": "A full day\non the water.",
+        "Jelajahi tiga Kepulauan Gili menggunakan glass-bottom boat yang luas dan nikmati pemandangan dunia bawah laut yang jernih.":
+        "Explore the three Gili Islands aboard a spacious glass-bottom boat and enjoy the clear underwater world.",
+
+        "Tiga Kepulauan Gili": "Three Gili Islands",
+        "Peralatan Gratis": "Free Equipment",
+        "Selesai Pukul 15.00": "Ends at 3:00 PM",
+        "Boat Luas": "Spacious Boat",
+        "Pengalaman Private": "Private Experience",
+        "Perencanaan Fleksibel": "Flexible Planning",
+
+        "Jelajahi lokasi snorkeling di sekitar Gili Trawangan, Gili Meno dan Gili Air.":
+        "Explore snorkeling locations around Gili Trawangan, Gili Meno and Gili Air.",
+        "Harga snorkeling sudah termasuk 10 masker dan kamera.":
+        "The snorkeling package includes 10 masks and a camera.",
+        "Pengalaman snorkeling harus selesai sebelum pukul 15.00.":
+        "The snorkeling experience must finish before 3:00 PM.",
+        "Nyaman untuk keluarga, teman dan rombongan besar.":
+        "Comfortable for families, friends and large groups.",
+        "Nikmati boat secara eksklusif bersama rombongan Anda sendiri.":
+        "Enjoy the boat exclusively with your own group.",
+        "Beri tahu jumlah rombongan dan tanggal perjalanan, lalu kami akan mengaturnya.":
+        "Tell us your group size and travel date, and we will arrange it for you.",
+
+        /* EQUIPMENT */
+        "PERALATAN": "EQUIPMENT",
+        "Semua yang Anda\nperlukan.": "Everything you\nneed.",
+        "TERM ASUK": "INCLUDED",
+        "TERMASUK": "INCLUDED",
+        "OPSIONAL": "OPTIONAL",
+        "Pelampung": "Life Jacket",
+        "Gratis.": "Free.",
+        "Masker": "Mask",
+        "Kaki Katak": "Fins",
+        "INFORMASI PERALATAN": "EQUIPMENT INFORMATION",
+        "Paket snorkeling standar sudah termasuk 10 masker dan kamera. Peralatan tambahan dapat diminta saat melakukan pemesanan.":
+        "The standard snorkeling package includes 10 masks and a camera. Additional equipment can be requested when booking.",
+
+        /* EXPERIENCE */
+        "PENGALAMAN": "EXPERIENCE",
+        "Lebih luas.\nLebih bebas.": "More space.\nMore freedom.",
+
+        "JENIS": "TYPE",
+        "KAPASITAS": "CAPACITY",
+        "TRANSFER": "TRANSFER",
+        "PEMANDU": "GUIDE",
+        "WAKTU": "TIME",
+        "Hingga 25 tamu": "Up to 25 guests",
+        "Snorkeling selesai sebelum 15.00": "Snorkeling ends before 3:00 PM",
+        "+ IDR 150K untuk 16–25 tamu": "+ IDR 150K for 16–25 guests",
+
+        /* BEFORE BOOKING */
+        "SEBELUM MEMESAN": "BEFORE YOU BOOK",
+        "Beberapa hal\nyang perlu diketahui.": "A few things\nyou should know.",
+        "Maksimal 25 Tamu": "Maximum 25 Guests",
+        "Selesai Sebelum 15.00": "Ends Before 3:00 PM",
+        "Aktivitas snorkeling harus selesai sebelum pukul 15.00.":
+        "Snorkeling must finish before 3:00 PM.",
+
+        /* BOOKING */
+        "SIAP BERANGKAT?": "READY TO GO?",
+        "Pesan\nLarge Glass Boat Anda.": "Book\nYour Large Glass Boat.",
+        "Kirimkan tanggal, jumlah tamu, tujuan dan apakah Anda membutuhkan transfer atau pengalaman snorkeling. Kami akan mengonfirmasi detailnya bersama Anda.":
+        "Send us your date, number of guests, destination and whether you need a transfer or snorkeling experience. We will confirm the details with you.",
+        "PESAN VIA WHATSAPP": "BOOK VIA WHATSAPP",
+
+        /* FINAL */
+        "Pengalaman Gili Anda\ndimulai di sini.": "Your Gili Experience\nstarts here.",
+        "Transfer dengan glass boat, snorkeling dan pengalaman private untuk rombongan di sekitar Kepulauan Gili.":
+        "Glass boat transfers, snorkeling and private experiences for groups around the Gili Islands.",
+        "CHAT DENGAN KAMI": "CHAT WITH US",
+
+        /* FOOTER */
+        "PRIVATE BOAT • SNORKELING • KEPULAUAN GILI":
+        "PRIVATE BOAT • SNORKELING • GILI ISLANDS"
+    };
+
+
+    /* ==========================================
+       TRANSLATE ELEMENTS
+    ========================================== */
+
+    document.querySelectorAll("body *").forEach(function(el) {
+
+        if (el.children.length > 0) return;
+
+        let text = el.textContent
+            .replace(/\s+/g, " ")
+            .trim();
+
+        for (const [indo, english] of Object.entries(translations)) {
+
+            const cleanIndo = indo
+                .replace(/\n/g, " ")
+                .replace(/\s+/g, " ")
+                .trim();
+
+            if (text === cleanIndo) {
+
+                if (english.includes("\n")) {
+
+                    const parts = english.split("\n");
+
+                    el.innerHTML =
+                        parts[0] + "<br>" + parts[1];
+
+                } else {
+
+                    el.textContent = english;
+
+                }
+
+                break;
+            }
+        }
+    });
+
+
+    /* ==========================================
+       TRANSLATE HEADINGS WITH <BR>
+    ========================================== */
+
+    document.querySelectorAll("h1, h2, h3, p").forEach(function(el) {
+
+        const text = el.innerText
+            .replace(/\s+/g, " ")
+            .trim();
+
+        for (const [indo, english] of Object.entries(translations)) {
+
+            const cleanIndo = indo
+                .replace(/\n/g, " ")
+                .replace(/\s+/g, " ")
+                .trim();
+
+            if (text === cleanIndo) {
+
+                if (english.includes("\n")) {
+
+                    const parts = english.split("\n");
+
+                    el.innerHTML =
+                        parts[0] + "<br>" + parts[1];
+
+                } else {
+
+                    el.textContent = english;
+                }
+
+                break;
+            }
+        }
+    });
+}
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.querySelectorAll("*").forEach(function (el) {
+
+        const text = el.textContent.trim();
+
+        if (text === "EN") {
+
+            el.style.cursor = "pointer";
+
+            el.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                setLanguage("en");
+            });
+
+        }
+
+        if (text === "ID") {
+
+            el.style.cursor = "pointer";
+
+            el.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                location.reload();
+            });
+
+        }
+
+    });
+
+});
+</script>
+</body>
+</html>

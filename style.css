@@ -1,0 +1,3125 @@
+/* =========================================================
+   GILI LOMBOK TRIP
+   PREMIUM • ELEGANT • LUXURY
+   MOBILE SWIPE FRIENDLY
+   ========================================================= */
+
+:root {
+    --navy: #061522;
+    --navy-2: #081d2d;
+    --navy-3: #0b2639;
+    --navy-dark: #03121e;
+
+    --gold: #d4af37;
+    --gold-light: #e5c65a;
+
+    --white: #ffffff;
+    --text: rgba(255,255,255,.78);
+    --muted: rgba(255,255,255,.56);
+
+    --line: rgba(255,255,255,.10);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+
+    overflow-x: hidden;
+
+    background: var(--navy);
+    color: var(--white);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.7;
+}
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+    min-height: 76px;
+
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: rgba(3,15,26,.48);
+
+    border-bottom:
+        1px solid rgba(212,175,55,.18);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.logo {
+    flex-shrink: 0;
+
+    color: var(--gold);
+
+    font-size: 17px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 34px;
+
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: rgba(255,255,255,.82);
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition:
+        color .3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--gold);
+
+    transition:
+        width .3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-button {
+    flex-shrink: 0;
+
+    padding: 12px 22px;
+
+    background: var(--gold);
+    color: var(--navy);
+
+    text-decoration: none;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition:
+        .3s ease;
+}
+
+.nav-button:hover {
+    background: var(--white);
+
+    transform:
+        translateY(-2px);
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    flex-shrink: 0;
+
+    color:
+        rgba(255,255,255,.4);
+
+    font-size: 9px;
+}
+
+.language-switcher button {
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+.language-switcher button:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 88vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 120px 25px 90px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(3,15,26,.38),
+            rgba(3,15,26,.58)
+        ),
+        url("gili.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.10),
+            transparent 55%,
+            rgba(3,15,26,.78)
+        );
+
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 900px;
+
+    animation:
+        fadeUp 1s ease both;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+}
+
+.hero h1 {
+    margin-bottom: 22px;
+
+    color: var(--white);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(52px,7vw,88px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    text-shadow:
+        0 10px 40px rgba(0,0,0,.55);
+}
+
+.description {
+    width: 100%;
+    max-width: 620px;
+
+    margin:
+        0 auto 35px;
+
+    color:
+        rgba(255,255,255,.84);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 16px 34px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    border:
+        1px solid var(--gold);
+
+    text-decoration: none;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    transition:
+        .35s ease;
+}
+
+.hero-button:hover {
+    background: transparent;
+
+    color: var(--white);
+
+    border-color: var(--white);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   CINEMATIC VIDEO
+   ========================================================= */
+
+.video-showcase {
+    position: relative;
+
+    width: 100%;
+    height: 620px;
+
+    overflow: hidden;
+
+    background: #020a11;
+}
+
+.video-showcase video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+
+    object-fit: cover;
+
+    filter:
+        brightness(.68)
+        saturate(.95);
+
+    transform:
+        scale(1.01);
+
+    pointer-events: none;
+}
+
+.video-showcase::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2,10,17,.78),
+            rgba(2,10,17,.35) 50%,
+            rgba(2,10,17,.12)
+        );
+
+    pointer-events: none;
+}
+
+.video-showcase::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(6,21,34,.45),
+            transparent 25%,
+            transparent 72%,
+            rgba(6,21,34,.95)
+        );
+
+    pointer-events: none;
+}
+
+.video-overlay {
+    position: absolute;
+
+    left: 8%;
+    top: 50%;
+
+    z-index: 3;
+
+    width: 90%;
+    max-width: 600px;
+
+    transform:
+        translateY(-50%);
+
+    pointer-events: none;
+}
+
+.video-overlay p {
+    margin-bottom: 18px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.video-overlay h2 {
+    margin-bottom: 18px;
+
+    color: var(--white);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px,5vw,64px);
+
+    font-weight: 400;
+
+    line-height: 1.02;
+}
+
+.video-overlay span {
+    color:
+        rgba(255,255,255,.72);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.experience {
+    width: 100%;
+
+    padding:
+        120px 6% 100px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(14,55,78,.28),
+            transparent 45%
+        ),
+        var(--navy-2);
+}
+
+.experience-header {
+    width: 100%;
+    max-width: 800px;
+
+    margin:
+        0 auto 65px;
+
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 18px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.experience h2 {
+    margin-bottom: 22px;
+
+    color: var(--white);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px,5vw,62px);
+
+    font-weight: 400;
+
+    line-height: 1.03;
+}
+
+.section-text {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   GILI CAROUSEL
+   ========================================================= */
+
+.gili-carousel {
+    position: relative;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.gili-track {
+    display: flex;
+
+    gap: 24px;
+
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding:
+        10px 5px 25px;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+
+    cursor: grab;
+
+    user-select: none;
+
+    touch-action: pan-x;
+}
+
+.gili-track::-webkit-scrollbar {
+    display: none;
+}
+
+.gili-track.dragging {
+    cursor: grabbing;
+
+    scroll-behavior: auto;
+}
+
+.gili-track.is-swiping {
+    cursor: grabbing;
+
+    scroll-behavior: auto;
+
+    scroll-snap-type: none;
+}
+
+.gili-card {
+    position: relative;
+
+    flex:
+        0 0 calc((100% - 48px) / 3);
+
+    min-width: 0;
+
+    height: 520px;
+
+    overflow: hidden;
+
+    scroll-snap-align: start;
+
+    background:
+        var(--navy-3);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease;
+}
+
+.gili-card:hover {
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(212,175,55,.6);
+}
+
+.gili-card img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .7s ease;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+
+    pointer-events: none;
+}
+
+.gili-card:hover img {
+    transform:
+        scale(1.06);
+}
+
+.gili-card-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(2,12,20,.96) 5%,
+            rgba(2,12,20,.58) 48%,
+            rgba(2,12,20,.08) 100%
+        );
+
+    pointer-events: none;
+}
+
+.gili-card-content {
+    position: absolute;
+
+    left: 28px;
+    right: 28px;
+    bottom: 30px;
+
+    z-index: 2;
+}
+
+.gili-card-content span {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color:
+        var(--gold);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.gili-card-content h3 {
+    margin-bottom: 12px;
+
+    color:
+        var(--white);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+    font-weight: 400;
+
+    line-height: 1.1;
+}
+
+.gili-card-content p {
+    margin-bottom: 20px;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.gili-button {
+    display: inline-block;
+
+    padding:
+        11px 16px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    text-decoration: none;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        .3s ease;
+
+    touch-action: manipulation;
+}
+
+.gili-button:hover {
+    background:
+        var(--white);
+}
+
+.gili-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 10;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(212,175,55,.5);
+
+    border-radius: 50%;
+
+    background:
+        rgba(4,18,31,.82);
+
+    color:
+        var(--gold);
+
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transform:
+        translateY(-50%);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        .3s ease;
+}
+
+.gili-arrow:hover {
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+}
+
+.gili-prev {
+    left: -22px;
+}
+
+.gili-next {
+    right: -22px;
+}
+
+.gili-dots {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.gili-dot {
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.25);
+
+    cursor: pointer;
+}
+
+.gili-dot.active {
+    width: 24px;
+
+    border-radius: 10px;
+
+    background:
+        var(--gold);
+}
+
+
+/* =========================================================
+   TRIPS
+   ========================================================= */
+
+.trips {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        120px 6%;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--navy-2),
+            #04121f
+        );
+}
+
+.trips-header {
+    width: 100%;
+    max-width: 800px;
+
+    margin:
+        0 auto 55px;
+
+    text-align: center;
+}
+
+.trips-label {
+    margin-bottom: 18px;
+
+    color:
+        var(--gold);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.trips-header h2 {
+    margin-bottom: 20px;
+
+    color:
+        var(--white);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(40px,5vw,58px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+.trips-intro {
+    max-width: 680px;
+
+    margin:
+        0 auto 20px;
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.special-rate {
+    margin-top: 25px;
+    margin-bottom: 9px;
+
+    color:
+        var(--gold);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.rate-text {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color:
+        rgba(255,255,255,.48);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TRIP SLIDER
+   ========================================================= */
+
+.trip-slider {
+    position: relative;
+
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+.trip-cards {
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    gap: 28px;
+
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding:
+        10px 48px 30px;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+
+    cursor: grab;
+
+    user-select: none;
+
+    touch-action: pan-x;
+}
+
+.trip-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.trip-cards.dragging {
+    cursor: grabbing;
+
+    scroll-behavior: auto;
+
+    scroll-snap-type: none;
+}
+
+.trip-cards.is-swiping {
+    cursor: grabbing;
+
+    scroll-behavior: auto;
+
+    scroll-snap-type: none;
+}
+
+.trip-card {
+    position: relative;
+
+    flex:
+        0 0 calc((100% - 56px) / 3);
+
+    width:
+        calc((100% - 56px) / 3);
+
+    min-width:
+        calc((100% - 56px) / 3);
+
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    scroll-snap-align: start;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.09);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.18);
+
+    transition:
+        .4s ease;
+}
+
+.trip-card:hover {
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(212,175,55,.55);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.35);
+}
+
+.trip-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background:
+        var(--gold);
+
+    z-index: 5;
+
+    transition:
+        width .45s ease;
+
+    pointer-events: none;
+}
+
+.trip-card:hover::before {
+    width: 100%;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    transition:
+        transform .7s ease;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+
+    pointer-events: none;
+}
+
+.trip-card:hover img {
+    transform:
+        scale(1.045);
+}
+
+.trip-card > span {
+    display: block;
+
+    margin:
+        23px 26px 10px;
+
+    color:
+        var(--gold);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.trip-card h3 {
+    margin:
+        0 26px 14px;
+
+    color:
+        var(--white);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+}
+
+.trip-card p {
+    margin:
+        0 26px;
+
+    color:
+        rgba(255,255,255,.58);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+.trip-price {
+    margin:
+        18px 26px 0;
+
+    color:
+        var(--white);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.trip-offer {
+    margin:
+        12px 26px 18px;
+
+    color:
+        var(--gold);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+.trip-card-actions {
+    margin:
+        auto 26px 26px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+.trip-card-actions .trip-button {
+    margin: 0;
+}
+
+.trip-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding:
+        0 18px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+
+    text-decoration: none;
+
+    transition:
+        .3s ease;
+
+    touch-action: manipulation;
+}
+
+.trip-button:hover {
+    background:
+        var(--white);
+
+    transform:
+        translateY(-2px);
+}
+
+.trip-whatsapp {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding:
+        0 18px;
+
+    background:
+        #25D366;
+
+    color:
+        #062014;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+
+    touch-action: manipulation;
+}
+
+.trip-whatsapp:hover {
+    background:
+        var(--white);
+
+    transform:
+        translateY(-2px);
+}
+
+.trip-card:nth-child(4)::after {
+    content:
+        "PRIVATE • SUNSET";
+
+    position: absolute;
+
+    top: 17px;
+    right: 17px;
+
+    z-index: 8;
+
+    padding:
+        7px 10px;
+
+    background:
+        rgba(4,18,31,.82);
+
+    border:
+        1px solid rgba(212,175,55,.6);
+
+    color:
+        var(--gold);
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    backdrop-filter:
+        blur(6px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TRIP ARROWS
+   ========================================================= */
+
+.trip-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 30;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border:
+        1px solid rgba(212,175,55,.55);
+
+    border-radius: 50%;
+
+    background:
+        rgba(4,18,31,.88);
+
+    color:
+        var(--gold);
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transform:
+        translateY(-50%);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    transition:
+        .3s ease;
+}
+
+.trip-arrow:hover {
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+.trip-prev {
+    left: 8px;
+}
+
+.trip-next {
+    right: 8px;
+}
+
+
+/* =========================================================
+   JOURNEY
+   ========================================================= */
+
+.journey-section {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 560px;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(3,18,30,.82),
+            rgba(3,18,30,.30) 60%,
+            rgba(3,18,30,.38)
+        ),
+        linear-gradient(
+            0deg,
+            rgba(3,18,30,.80),
+            transparent 65%
+        ),
+        url("speedboat-journey.jpg");
+
+    background-size:
+        cover;
+
+    background-position:
+        center center;
+
+    background-repeat:
+        no-repeat;
+}
+
+.journey-section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 65% 35%,
+            rgba(255,255,255,.06),
+            transparent 40%
+        );
+
+    pointer-events: none;
+}
+
+.journey-content {
+    position: relative;
+
+    z-index: 3;
+
+    width:
+        min(1150px,88%);
+
+    margin:
+        0 auto;
+
+    padding:
+        0 0 70px;
+}
+
+.journey-label {
+    margin-bottom: 14px;
+
+    color:
+        var(--gold-light);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform:
+        uppercase;
+}
+
+.journey-content h2 {
+    margin:
+        0 0 18px;
+
+    max-width: 700px;
+
+    color:
+        var(--white);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px,5vw,72px);
+
+    font-weight:
+        400;
+
+    line-height:
+        1.02;
+
+    text-shadow:
+        0 12px 35px rgba(0,0,0,.45);
+}
+
+.journey-content p {
+    max-width: 620px;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.78);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-section {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        130px 25px;
+
+    text-align:
+        center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(212,175,55,.07),
+            transparent 45%
+        ),
+        linear-gradient(
+            180deg,
+            #04121f,
+            #020d16
+        );
+
+    border-top:
+        1px solid rgba(212,175,55,.10);
+}
+
+.contact-label {
+    margin-bottom: 20px;
+
+    color:
+        var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.contact-section h2 {
+    margin-bottom: 22px;
+
+    color:
+        var(--white);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(44px,5vw,64px);
+
+    font-weight:
+        400;
+
+    line-height:
+        1.04;
+}
+
+.contact-text {
+    width: 100%;
+    max-width: 650px;
+
+    margin:
+        0 auto 32px;
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.contact-button {
+    display:
+        inline-block;
+
+    padding:
+        16px 27px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--navy);
+
+    text-decoration:
+        none;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition:
+        .35s ease;
+
+    touch-action:
+        manipulation;
+}
+
+.contact-button:hover {
+    background:
+        transparent;
+
+    color:
+        var(--white);
+
+    border:
+        1px solid var(--white);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    width: 100%;
+
+    padding:
+        75px 7% 30px;
+
+    background:
+        #020d16;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 70px;
+}
+
+.footer h3 {
+    margin-bottom: 17px;
+
+    color:
+        var(--gold);
+
+    font-size: 17px;
+
+    letter-spacing: 4px;
+}
+
+.footer h4 {
+    margin-bottom: 18px;
+
+    color:
+        var(--gold);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.footer p {
+    margin-bottom: 8px;
+
+    color:
+        rgba(255,255,255,.43);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+.footer a {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color:
+        rgba(255,255,255,.43);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    transition:
+        .3s ease;
+}
+
+.footer a:hover {
+    color:
+        var(--gold);
+
+    transform:
+        translateX(3px);
+}
+
+.footer-contact a {
+    display:
+        inline-block;
+
+    margin-right: 18px;
+    margin-top: 5px;
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1200px;
+
+    margin:
+        50px auto 0;
+
+    padding-top:
+        22px;
+
+    text-align:
+        center;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.25);
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .gili-card {
+        flex-basis:
+            calc((100% - 24px) / 2);
+    }
+
+    .trip-card {
+        flex-basis:
+            calc((100% - 28px) / 2);
+
+        width:
+            calc((100% - 28px) / 2);
+
+        min-width:
+            calc((100% - 28px) / 2);
+    }
+
+    .gili-prev {
+        left: 5px;
+    }
+
+    .gili-next {
+        right: 5px;
+    }
+
+    .trip-prev {
+        left: 5px;
+    }
+
+    .trip-next {
+        right: 5px;
+    }
+
+    .footer-content {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* NAV */
+
+    .navbar {
+        min-height: 65px;
+
+        padding:
+            0 16px;
+
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 13px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-button {
+        margin-left: auto;
+
+        padding:
+            10px 13px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .language-switcher {
+        gap: 4px;
+
+        font-size: 8px;
+    }
+
+    .language-switcher button {
+        font-size: 8px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 700px;
+
+        padding:
+            110px 20px 70px;
+
+        background-position:
+            center center;
+    }
+
+    .subtitle {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        max-width: 500px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size:
+            clamp(42px,12vw,58px);
+
+        line-height: 1;
+    }
+
+    .description {
+        max-width: 350px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* VIDEO */
+
+    .video-showcase {
+        height: 560px;
+    }
+
+    .video-overlay {
+        left: 25px;
+        right: 25px;
+
+        top: auto;
+        bottom: 70px;
+
+        width: auto;
+
+        transform: none;
+    }
+
+    .video-overlay p {
+        font-size: 8px;
+
+        letter-spacing: 3px;
+    }
+
+    .video-overlay h2 {
+        font-size:
+            clamp(36px,10vw,50px);
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience {
+        padding:
+            78px 14px 70px;
+    }
+
+    .experience-header {
+        margin-bottom: 38px;
+    }
+
+    .section-label {
+        font-size: 8px;
+
+        letter-spacing: 3px;
+    }
+
+    .experience h2 {
+        font-size:
+            clamp(34px,9vw,46px);
+
+        line-height: 1.04;
+    }
+
+    .section-text {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       GILI MOBILE
+       SMALLER + EASY SWIPE
+       ===================================================== */
+
+    .gili-carousel {
+        width: 100%;
+
+        overflow: visible;
+    }
+
+    .gili-track {
+        gap: 14px;
+
+        width: 100%;
+
+        padding:
+            8px 14px 22px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-snap-type:
+            x mandatory;
+
+        scroll-padding-left:
+            14px;
+
+        scroll-padding-right:
+            14px;
+
+        overscroll-behavior-x:
+            contain;
+
+        overscroll-behavior-y:
+            auto;
+
+        touch-action:
+            pan-x;
+
+        -webkit-overflow-scrolling:
+            touch;
+    }
+
+    .gili-card {
+        flex:
+            0 0 76%;
+
+        width:
+            76%;
+
+        min-width:
+            76%;
+
+        height:
+            420px;
+
+        scroll-snap-align:
+            center;
+
+        border-radius:
+            1px;
+
+        transform:
+            none !important;
+    }
+
+    .gili-card-content {
+        left: 18px;
+        right: 18px;
+        bottom: 20px;
+    }
+
+    .gili-card-content span {
+        margin-bottom: 9px;
+
+        font-size: 7px;
+
+        letter-spacing:
+            2.5px;
+    }
+
+    .gili-card-content h3 {
+        margin-bottom: 8px;
+
+        font-size: 24px;
+    }
+
+    .gili-card-content p {
+        margin-bottom: 13px;
+
+        font-size: 10px;
+
+        line-height: 1.55;
+    }
+
+    .gili-button {
+        min-height:
+            38px;
+
+        padding:
+            0 14px;
+
+        font-size: 7px;
+
+        letter-spacing:
+            1.3px;
+
+        display:
+            inline-flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+    }
+
+    .gili-arrow {
+        width: 38px;
+        height: 38px;
+
+        font-size: 21px;
+
+        z-index: 40;
+    }
+
+    .gili-prev {
+        left: 2px;
+    }
+
+    .gili-next {
+        right: 2px;
+    }
+
+    .gili-dots {
+        margin-top: 7px;
+    }
+
+
+    /* =====================================================
+       TRIPS MOBILE
+       SMALLER + EASY SWIPE
+       ===================================================== */
+
+    .trips {
+        padding:
+            80px 14px;
+    }
+
+    .trips-header {
+        margin-bottom:
+            38px;
+    }
+
+    .trips-header h2 {
+        font-size:
+            clamp(34px,9vw,48px);
+    }
+
+    .trips-intro,
+    .rate-text {
+        font-size: 12px;
+    }
+
+    .special-rate {
+        font-size: 8px;
+
+        letter-spacing:
+            2.5px;
+    }
+
+    .trip-slider {
+        width:
+            100%;
+
+        overflow:
+            visible;
+    }
+
+    .trip-cards {
+        gap: 14px;
+
+        width: 100%;
+
+        padding:
+            8px 14px 24px;
+
+        overflow-x:
+            auto;
+
+        overflow-y:
+            hidden;
+
+        scroll-snap-type:
+            x mandatory;
+
+        scroll-padding-left:
+            14px;
+
+        scroll-padding-right:
+            14px;
+
+        overscroll-behavior-x:
+            contain;
+
+        overscroll-behavior-y:
+            auto;
+
+        touch-action:
+            pan-x;
+
+        -webkit-overflow-scrolling:
+            touch;
+    }
+
+    .trip-card {
+        flex:
+            0 0 78% !important;
+
+        width:
+            78% !important;
+
+        min-width:
+            78% !important;
+
+        min-height:
+            430px;
+
+        scroll-snap-align:
+            center;
+
+        transform:
+            none !important;
+    }
+
+    .trip-card img {
+        height:
+            175px;
+    }
+
+    .trip-card > span {
+        margin:
+            17px 18px 7px;
+
+        font-size: 7px;
+
+        letter-spacing:
+            3px;
+    }
+
+    .trip-card h3 {
+        margin:
+            0 18px 10px;
+
+        font-size:
+            23px;
+
+        line-height:
+            1.12;
+    }
+
+    .trip-card p {
+        margin:
+            0 18px;
+
+        font-size:
+            10px;
+
+        line-height:
+            1.6;
+    }
+
+    .trip-price {
+        margin:
+            14px 18px 0;
+
+        font-size:
+            12px;
+    }
+
+    .trip-offer {
+        margin:
+            9px 18px 13px;
+
+        font-size:
+            7px;
+
+        letter-spacing:
+            2px;
+    }
+
+    .trip-card-actions {
+        margin:
+            auto 18px 18px;
+
+        gap: 8px;
+    }
+
+    .trip-button,
+    .trip-whatsapp {
+        min-height:
+            38px;
+
+        padding:
+            0 14px;
+
+        font-size:
+            7px;
+
+        letter-spacing:
+            1.25px;
+    }
+
+    .trip-arrow {
+        width:
+            38px;
+
+        height:
+            38px;
+
+        font-size:
+            21px;
+
+        z-index:
+            40;
+    }
+
+    .trip-prev {
+        left:
+            2px;
+    }
+
+    .trip-next {
+        right:
+            2px;
+    }
+
+
+    /* JOURNEY */
+
+    .journey-section {
+        min-height:
+            470px;
+
+        background-position:
+            center center;
+    }
+
+    .journey-content {
+        width:
+            90%;
+
+        padding-bottom:
+            45px;
+    }
+
+    .journey-label {
+        font-size: 8px;
+
+        letter-spacing:
+            3px;
+    }
+
+    .journey-content h2 {
+        font-size:
+            38px;
+    }
+
+    .journey-content p {
+        max-width:
+            100%;
+
+        font-size:
+            12px;
+    }
+
+
+    /* JOURNEY GALLERY */
+
+    .journey-gallery {
+        width:
+            92%;
+
+        grid-template-columns:
+            1fr;
+
+        grid-template-rows:
+            360px 250px 250px;
+
+        gap:
+            14px;
+
+        padding-bottom:
+            65px;
+    }
+
+    .journey-gallery .journey-main,
+    .journey-gallery .visual:nth-child(2),
+    .journey-gallery .visual:nth-child(3) {
+        grid-column:
+            1;
+    }
+
+    .journey-gallery .journey-main {
+        grid-row:
+            1;
+    }
+
+    .journey-gallery .visual:nth-child(2) {
+        grid-row:
+            2;
+    }
+
+    .journey-gallery .visual:nth-child(3) {
+        grid-row:
+            3;
+    }
+
+    .journey-gallery .visual-caption {
+        left:
+            18px;
+
+        right:
+            18px;
+
+        bottom:
+            18px;
+    }
+
+    .journey-gallery .visual-caption h3 {
+        font-size:
+            25px;
+    }
+
+    .journey-gallery .visual-caption p:last-child {
+        font-size:
+            10px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        padding:
+            90px 20px;
+    }
+
+    .contact-section h2 {
+        font-size:
+            clamp(36px,9vw,48px);
+    }
+
+    .contact-text {
+        font-size:
+            12px;
+    }
+
+    .contact-button {
+        max-width:
+            100%;
+
+        padding:
+            15px 18px;
+
+        font-size:
+            7px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding:
+            55px 20px 25px;
+    }
+
+    .footer-content {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            32px;
+    }
+
+    .footer h3 {
+        font-size:
+            17px;
+    }
+
+    .footer p,
+    .footer a {
+        font-size:
+            10px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .logo {
+        font-size:
+            11px;
+
+        letter-spacing:
+            2px;
+    }
+
+    .nav-button {
+        padding:
+            9px 10px;
+
+        font-size:
+            7px;
+    }
+
+    .language-switcher {
+        display:
+            none;
+    }
+
+    .hero {
+        min-height:
+            680px;
+    }
+
+    .hero h1 {
+        font-size:
+            40px;
+    }
+
+    .video-showcase {
+        height:
+            500px;
+    }
+
+
+    /* GILI */
+
+    .gili-track {
+        gap:
+            12px;
+
+        padding-left:
+            12px;
+
+        padding-right:
+            12px;
+
+        scroll-padding-left:
+            12px;
+
+        scroll-padding-right:
+            12px;
+    }
+
+    .gili-card {
+        flex-basis:
+            73%;
+
+        width:
+            73%;
+
+        min-width:
+            73%;
+
+        height:
+            395px;
+    }
+
+    .gili-card-content {
+        left:
+            16px;
+
+        right:
+            16px;
+
+        bottom:
+            17px;
+    }
+
+    .gili-card-content h3 {
+        font-size:
+            22px;
+    }
+
+
+    /* TRIP */
+
+    .trip-cards {
+        gap:
+            12px;
+
+        padding-left:
+            12px;
+
+        padding-right:
+            12px;
+
+        scroll-padding-left:
+            12px;
+
+        scroll-padding-right:
+            12px;
+    }
+
+    .trip-card {
+        flex-basis:
+            76% !important;
+
+        width:
+            76% !important;
+
+        min-width:
+            76% !important;
+
+        min-height:
+            420px;
+    }
+
+    .trip-card img {
+        height:
+            165px;
+    }
+
+    .trip-card h3 {
+        font-size:
+            22px;
+    }
+
+    .trip-card p {
+        font-size:
+            9.5px;
+    }
+
+    .trip-card-actions {
+        margin:
+            auto 16px 16px;
+    }
+
+    .trip-button,
+    .trip-whatsapp {
+        min-height:
+            37px;
+
+        padding:
+            0 12px;
+
+        font-size:
+            6.5px;
+    }
+
+    .journey-section {
+        min-height:
+            430px;
+    }
+
+    .journey-content h2 {
+        font-size:
+            34px;
+    }
+
+}
+/* =========================================================
+   FINAL MOBILE FIX
+   SMALL CARD + VERTICAL PAGE SCROLL
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       GILI CAROUSEL
+       ========================= */
+
+    .gili-track {
+        gap: 12px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        /*
+         * PENTING:
+         * Jangan pakai pan-x.
+         * pan-y membuat halaman tetap bisa
+         * discroll ke atas / bawah di HP.
+         */
+        touch-action: pan-y;
+
+        -webkit-overflow-scrolling: touch;
+
+        scroll-snap-type: x mandatory;
+    }
+
+    .gili-card {
+        flex: 0 0 62%;
+        width: 62%;
+        min-width: 62%;
+
+        height: 360px;
+
+        scroll-snap-align: center;
+
+        transform: none !important;
+    }
+
+    .gili-card-content {
+        left: 15px;
+        right: 15px;
+        bottom: 16px;
+    }
+
+    .gili-card-content span {
+        margin-bottom: 6px;
+
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+
+    .gili-card-content h3 {
+        margin-bottom: 6px;
+
+        font-size: 20px;
+        line-height: 1.1;
+    }
+
+    .gili-card-content p {
+        margin-bottom: 10px;
+
+        font-size: 9px;
+        line-height: 1.45;
+    }
+
+    .gili-button {
+        min-height: 34px;
+
+        padding: 0 12px;
+
+        font-size: 6.5px;
+        letter-spacing: 1px;
+    }
+
+
+    /* =========================
+       GILI ARROW
+       ========================= */
+
+    .gili-arrow {
+        width: 34px;
+        height: 34px;
+
+        font-size: 19px;
+
+        z-index: 50;
+    }
+
+    .gili-prev {
+        left: 0;
+    }
+
+    .gili-next {
+        right: 0;
+    }
+
+
+    /* =========================
+       TRIP CAROUSEL
+       ========================= */
+
+    .trip-cards {
+        gap: 12px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        /*
+         * INI YANG PALING PENTING
+         */
+        touch-action: pan-y;
+
+        -webkit-overflow-scrolling: touch;
+
+        scroll-snap-type: x mandatory;
+    }
+
+
+    /* CARD JAUH LEBIH KECIL */
+
+    .trip-card {
+        flex: 0 0 62% !important;
+
+        width: 62% !important;
+
+        min-width: 62% !important;
+
+        min-height: 370px;
+
+        scroll-snap-align: center;
+
+        transform: none !important;
+    }
+
+
+    /* =========================
+       GAMBAR CARD
+       ========================= */
+
+    .trip-card img {
+        width: 100%;
+        height: 135px;
+
+        object-fit: cover;
+    }
+
+
+    /* =========================
+       NOMOR
+       ========================= */
+
+    .trip-card > span {
+        margin:
+            13px 14px 5px;
+
+        font-size: 6px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* =========================
+       JUDUL
+       ========================= */
+
+    .trip-card h3 {
+        margin:
+            0 14px 7px;
+
+        font-size: 19px;
+
+        line-height: 1.12;
+    }
+
+
+    /* =========================
+       DESKRIPSI
+       ========================= */
+
+    .trip-card p {
+        margin:
+            0 14px;
+
+        font-size: 8.5px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =========================
+       HARGA
+       ========================= */
+
+    .trip-price {
+        margin:
+            11px 14px 0;
+
+        font-size: 10px;
+    }
+
+
+    /* =========================
+       OFFER
+       ========================= */
+
+    .trip-offer {
+        margin:
+            7px 14px 9px;
+
+        font-size: 6px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* =========================
+       BUTTON
+       ========================= */
+
+    .trip-card-actions {
+        margin:
+            auto 14px 14px;
+
+        gap: 6px;
+
+        z-index: 20;
+    }
+
+    .trip-button,
+    .trip-whatsapp {
+        min-height: 32px;
+
+        padding:
+            0 11px;
+
+        font-size: 6px;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* =========================
+       TRIP ARROWS
+       ========================= */
+
+    .trip-arrow {
+        width: 34px;
+        height: 34px;
+
+        font-size: 19px;
+
+        z-index: 50;
+    }
+
+    .trip-prev {
+        left: 0;
+    }
+
+    .trip-next {
+        right: 0;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .gili-card {
+        flex-basis: 60%;
+        width: 60%;
+        min-width: 60%;
+
+        height: 340px;
+    }
+
+    .trip-card {
+        flex-basis: 60% !important;
+        width: 60% !important;
+        min-width: 60% !important;
+
+        min-height: 350px;
+    }
+
+    .trip-card img {
+        height: 125px;
+    }
+
+    .trip-card h3 {
+        font-size: 18px;
+    }
+
+    .trip-card p {
+        font-size: 8px;
+    }
+
+}
+
+/* =========================================================
+   FINAL MOBILE NAVBAR
+   SMALL • CLEAN • PREMIUM
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+        min-height: 56px;
+
+        padding: 0 11px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 7px;
+
+        background: rgba(3, 15, 26, .72);
+
+        border-bottom: 1px solid rgba(212,175,55,.14);
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* LOGO */
+
+    .logo {
+        flex: 0 0 auto;
+
+        font-size: 10px;
+
+        letter-spacing: 2.2px;
+
+        white-space: nowrap;
+    }
+
+    /* BOOK NOW */
+
+    .nav-button {
+        flex: 0 0 auto;
+
+        margin-left: auto;
+
+        padding: 8px 10px;
+
+        font-size: 6px;
+
+        letter-spacing: 1.1px;
+
+        white-space: nowrap;
+    }
+
+    /* LANGUAGE */
+
+    .language-switcher {
+        flex: 0 0 auto;
+
+        display: flex;
+        align-items: center;
+
+        gap: 3px;
+
+        font-size: 6px;
+
+        white-space: nowrap;
+    }
+
+    .language-switcher button {
+        padding: 0;
+
+        font-size: 6px;
+
+        letter-spacing: .5px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .navbar {
+        min-height: 52px;
+
+        padding: 0 9px;
+
+        gap: 6px;
+    }
+
+    .logo {
+        font-size: 9px;
+
+        letter-spacing: 1.8px;
+    }
+
+    .nav-button {
+        padding: 7px 8px;
+
+        font-size: 5.5px;
+
+        letter-spacing: .8px;
+    }
+
+    .language-switcher {
+        gap: 2px;
+
+        font-size: 5.5px;
+    }
+
+    .language-switcher button {
+        font-size: 5.5px;
+    }
+}
